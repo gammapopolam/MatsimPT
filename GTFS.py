@@ -54,12 +54,12 @@ def route(schedule, json_sched, dictlist):
                 #print opened['name'], opened['directions'][0]['name'], head, info['zones'][0]['name'], time
             
 
-rt=r'C:\Users\gamma\Documents\matsim\matsim-12.0\examples\pt_yus\rts\1.json'
+#rt=r'C:\Users\gamma\Documents\matsim\matsim-12.0\examples\pt_yus\rts\1.json'
 dictlist = stops(json.load(open(r'C:\Users\gamma\Documents\matsim\matsim-12.0\examples\pt_yus\stops_4326.geojson')), schedule)
-mypath=r'C:\Users\gamma\Documents\matsim\matsim-12.0\examples\pt_yus\rts'
+mypath=r'C:\Users\gamma\Documents\matsim\matsim-12.0\examples\pt_yus\rts\few'
 inputlist = [f for f in listdir(mypath) if isfile(join(mypath, f)) and '.json' in f]
 for i in range(len(inputlist)):
     rt=mypath+'\\'+inputlist[i]
     route(schedule, rt, dictlist)
 schedule.Validate()
-schedule.WriteGoogleTransitFeed('C:\\Users\\gamma\\Documents\\matsim\\matsim-12.0\\examples\\pt_yus\\tr.zip')
+schedule.WriteGoogleTransitFeed('C:\\Users\\gamma\\Documents\\matsim\\matsim-12.0\\examples\\pt_yus\\GTFS_few.zip')
