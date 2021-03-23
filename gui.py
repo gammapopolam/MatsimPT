@@ -1,0 +1,181 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb 14 00:45:30 2021
+
+@author: gammapopolam
+"""
+from os import listdir, rename
+from os.path import isfile, join, isdir, abspath, basename
+import sys
+import subprocess
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QFileDialog, QInputDialog
+# import folium
+import json
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
+#from PyQt5.QtGui import QIcon
+
+
+class Example(QWidget):
+
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+
+
+    def initUI(self):
+#        btn1=QPushButton('Выбрать конфиг и\n запустить модель', self)
+#        btn1.move(0, 0)
+        btn2=QPushButton('Проверить наличие\n новых итераций', self)
+        btn2.move(0, 30)
+        btn2.clicked.connect(self.check_iters_data_with_xml)
+        btn3=QPushButton('Сгенерировать для \nодного файла карты\n с маршрутами', self)
+        btn3.move(0, 70)
+        # btn3.clicked.connect(self.gen_folium_maps)
+        btn4=QPushButton('Чтение файла events\n (максимальная наполняемость)', self)
+        btn4.move(0, 120)
+        btn4.clicked.connect(self.event_reader)
+        btn5=QPushButton('Перевести geojson\n в .xml', self)
+        btn5.move(0, 170)
+        btn5.clicked.connect(self.network_gen)
+        self.setGeometry(640, 480, 300, 220)
+        self.setWindowTitle('MATSim')
+        self.show()
+        
+#    def choose_file(self):
+#        fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[1]
+#        subprocess.check_output(['java', 'Xmx60000m', '-jar', 'C:\\matsim\\minibus\\minibus-12.0-SNAPSHOT.jar', fname])
+    def network_gen(self):
+        fname = QFileDialog.getOpenFileName(self, 'Откройте geojson', 'C:\\')[0]
+        subprocess.Popen()
+    def check_iters_data_with_xml(self):
+        fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
+        name_of_file=basename(fname)
+        f=open(fname, encoding='utf-8')
+        for row in f:
+            if 'ENTITY INPUTBASE' in row:
+                netdir=fname[:-len(name_of_file)]+row[26:-3]
+#                net=QFileDialog.getOpenFileName(self, 'Откройте сеть', netdir)[0]
+            elif 'ENTITY OUTPUTBASE' in row:
+                foldername=fname[:-len(name_of_file)]+row[26:-3]+'ITERS'
+            elif 'ENTITY ITERS' in row:
+                iters=row[19:-3]
+            elif 'ENTITY EPSG' in row:
+                EPSG=row[18:-3]
+            elif 'ENTITY NETWORK' in row:
+                net=fname[:-len(name_of_file)]+row[23:-3]
+#        print(net, foldername, iters, EPSG)
+        fls=listdir(path=foldername)
+#        print(fls)
+        i=0
+        while i!=int(iters)+1:
+            i+=1
+            txt='it.'+str(i)
+            outtxt='it'+str(i)
+#            print(foldername+'/'+outtxt, foldername+'/'+txt)
+            if outtxt not in fls and txt in fls:
+                inschedfile=foldername+'/'+txt+'/'+'0.'+str(i)+'.transitSchedule.xml.gz'
+#                print('java', '-cp', 
+#                      'C:\\matsim\\pt2matsim\\pt2matsim-20.8-shaded.jar', 
+#                      'org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility',
+#                      inschedfile, net, 'EPSG:'+str(EPSG), foldername+'/'+outtxt)
+                subprocess.check_output(['java', '-cp', 
+                    'C:\\matsim\\pt2matsim\\pt2matsim-20.8-shaded.jar', 
+                    'org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility',
+                    inschedfile, net, 'EPSG:'+str(EPSG), foldername+'/'+outtxt])
+                rename(foldername+'/'+outtxt+'/'+'schedule_TransitRoutes.geojson', foldername+'/'+outtxt+'_'+'schedule_TransitRoutes.geojson', )
+                flag=0
+            else:
+                flag=1
+        
+        if int(flag)>0:
+            print(flag)
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setText("Предупреждение")
+            msg.setInformativeText('Модель не завершила генерацию итераций.')
+            msg.setWindowTitle("Предупреждение")
+            msg.exec_()
+    def gen_folium_maps(self):
+
+        
+        fname = QFileDialog.getOpenFileName(self, 'Откройте GeoJSON', 'C:\\')[0]
+        features=json.load(open(fname, encoding='utf-8'))['features']
+        transitLineIds_1=[]
+        transitLineIds=[]
+        for i in range(len(features)):
+            transportMode=features[i]['properties']['transportMode']
+            transitLineId=features[i]['properties']['transitRouteId'] # !!!!!!
+            transitLineIds_1.append(transitLineId)
+        transitLineIds=list(dict.fromkeys(transitLineIds_1))
+        for lineid in range(len(transitLineIds)):
+            transitLineId=transitLineIds[lineid]
+            print(transitLineId)
+            map_f=folium.Map(location=[46.959179, 142.738041])
+            fg=folium.FeatureGroup(transitLineId)
+            for i in range(len(features)):
+                transitLineId_json=features[i]['properties']['transitRouteId'] # !!!!!!!
+                if transitLineId==transitLineId_json:
+                    # print(transitLineId_json)
+                    geometry=features[i]['geometry']['coordinates']
+                    new_geometry=[]
+                    for g in range(len(geometry)):
+                        new_geometry.append([geometry[g][1], geometry[g][0]])
+                        info="departures: {str(features[i]['properties']['departures'])}\ndepartures: {str(features[i]['properties']['transitRouteSimLength']}"
+                        folium.PolyLine(locations=new_geometry, popup=info,color='black',weight=2).add_to(fg)
+                # print(line)
+                # map_f.add_child(line)
+                # print(1)
+                fg.add_to(map_f)
+        
+            folium.TileLayer('cartodbpositron').add_to(map_f)
+            folium.LayerControl().add_to(map_f)
+            map_f.save('C:\\matsim\\minibus\\output_8_dokhrena_2\\folium_maps\\it.100\\'+transitLineId+".html")
+    def event_reader(self):
+        fname = QFileDialog.getOpenFileName(self, 'Откройте XML с events', 'C:\\')[0]
+        import xml.etree.ElementTree as ET
+        # import csv
+        tree=ET.parse(fname)
+        root=tree.getroot()
+        vehicles={}
+        max_cap={}
+        for child in root:
+            if child.attrib['type']=='PersonEntersVehicle':
+                # print(child.attrib['vehicle'])
+                vehicles[child.attrib['vehicle']]=0
+                max_cap[child.attrib['vehicle']]=0
+        
+        for child in root:
+            if child.attrib['type']=='PersonEntersVehicle':
+                # print(child.attrib['vehicle'])
+                vehicles[child.attrib['vehicle']]=vehicles[child.attrib['vehicle']]+1
+                if vehicles[child.attrib['vehicle']]>max_cap[child.attrib['vehicle']]:
+                    max_cap[child.attrib['vehicle']]=vehicles[child.attrib['vehicle']]
+            elif child.attrib['type']=='PersonLeavesVehicle':
+                vehicles[child.attrib['vehicle']]=vehicles[child.attrib['vehicle']]-1
+        print(max_cap)
+        # f=csv.writer(open(fname[:-4]+'_PaxPerVeh.csv', 'w'))
+        # for key, val in vehicles.items():
+            # f.writerow([key, val])
+        # f.close()
+    def closeEvent(self, event):
+
+        reply = QMessageBox.question(self, 'Message',
+            "Are you sure to quit?", QMessageBox.Yes |
+            QMessageBox.No, QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            event.accept()
+        else:
+            event.ignore()
+        
+        
+        
+        
+        
+if __name__ == '__main__':
+
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())
+    print('end')
