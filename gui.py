@@ -4,15 +4,16 @@ Created on Sun Feb 14 00:45:30 2021
 
 @author: gammapopolam
 """
-from os import listdir, rename
+from os import listdir, rename, system, environ
 from os.path import isfile, join, isdir, abspath, basename
 import sys
-import subprocess
+# import subprocess
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QFileDialog, QInputDialog
 # import folium
 import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
+import geojson
 #from PyQt5.QtGui import QIcon
 
 
@@ -35,7 +36,7 @@ class Example(QWidget):
         btn4=QPushButton('Чтение файла events\n (максимальная наполняемость)', self)
         btn4.move(0, 120)
         btn4.clicked.connect(self.event_reader)
-        btn5=QPushButton('Перевести geojson\n в .xml', self)
+        btn5=QPushButton('Перевести geojson\n в network.xml', self)
         btn5.move(0, 170)
         btn5.clicked.connect(self.network_gen)
         self.setGeometry(640, 480, 300, 220)
@@ -46,8 +47,85 @@ class Example(QWidget):
 #        fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[1]
 #        subprocess.check_output(['java', 'Xmx60000m', '-jar', 'C:\\matsim\\minibus\\minibus-12.0-SNAPSHOT.jar', fname])
     def network_gen(self):
+        # import re
         fname = QFileDialog.getOpenFileName(self, 'Откройте geojson', 'C:\\')[0]
-        subprocess.Popen()
+        EPSG_CODE='EPSG:'+str(32635)
+        OUTPUT_F=fname[:-8]+'_conv.osm'
+        fj=json.load(open(fname, encoding='utf-8'))
+        collection=[]
+        for fts in range(len(fj['features'])):
+            # print(fj['features'][fts]['geometry'])
+            if fj['features'][fts]['geometry']['type']=='LineString':
+                linecoords=[]
+                for crds in range(len(fj['features'][fts]['geometry']['coordinates'])):
+                    # print(fj['features'][fts]['geometry']['coordinates'][crds])
+                    xy = (fj['features'][fts]['geometry']['coordinates'][crds][1], fj['features'][fts]['geometry']['coordinates'][crds][0])
+                    linecoords.append(xy)
+                line=geojson.LineString(linecoords)
+                feature=geojson.Feature(geometry=line)
+                collection.append(feature)
+        fet_col=geojson.FeatureCollection(collection)
+        geojson.dump(fet_col, open(fname[:-8]+'_remake.geojson', mode='w', encoding='utf-8'))
+        f_remake=fname[:-8]+'_remake.geojson'
+        # f=open(fname, encoding='utf-8').read()
+        # encoded=f.encode('ascii', 'ignore')
+        # print(type(encoded))
+        # decoded=encoded.decode()
+        # print(type(decoded))
+        # re.sub(r'[^\x00-\x7F]+',' ', decoded)
+        # json.dump(decoded, open(fname[:-8]+'_dec.geojson', 'w'))
+        # set_cmd=r'C:\\Users\\gammapopolam\\Anaconda3\\Library\\share\\gdal'
+        # environ['GDAL_DATA']=set_cmd
+        # cmd=f'C:\\Users\\gammapopolam\\Anaconda3\\python.exe C:\\PROGRA~1\\Git\\ogr2osm\\ogr2osm.py {f_remake} {OUTPUT_F} -f'
+        cmd=f'geojsontoosm {fname} > {OUTPUT_F} -f'
+        # print(cmd)
+        # print(system(set_cmd+' ; '+cmd))
+
+        from subprocess import Popen, PIPE, call, check_call, run
+        proc = run(cmd, capture_output=False, shell=True, encoding='utf-8')
+        print(proc)
+        pt2matsim_path=r'C:/matsim/pt2matsim/'
+        defaultosmconfig='C:/matsim/pt2matsim/DefaultOSMConfig.xml'
+        pt2matsim_jar=r'C:/matsim/pt2matsim/pt2matsim-20.8-shaded.jar'
+        osm2mn_cf=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CreateDefaultOsmConfig {defaultosmconfig}'
+        proc=run(osm2mn_cf, capture_output=False, shell=True, encoding='utf-8')
+        print(proc)
+
+        tree=ET.parse(defaultosmconfig)
+        root=tree.getroot()
+        for child in root:
+            for child1 in child:
+                # print(child1.tag, child1.attrib)
+                if child1.tag == 'param':
+                    if child1.attrib['name']=='osmFile':
+                        child1.attrib['value']=fname[:-8]+'_conv.osm'
+                    elif child1.attrib['name']=='outputCoordinateSystem':
+                        child1.attrib['value']=EPSG_CODE
+                    elif child1.attrib['name']=='outputDetailedLinkGeometryFile':
+                        child1.attrib['value']=f'{pt2matsim_path}detailedlinkgeom.csv'
+                    elif child1.attrib['name']=='outputNetworkFile':
+                        child1.attrib['value']=f'{pt2matsim_path}osm_network.xml'
+                if child1.tag == 'parameterset':
+                    if child1.attrib['type']=='routableSubnetwork':
+                        child1[0].attrib['value']='car, bus, pt'
+                        child1[1].attrib['value']='car, bus, pt'
+                    elif child1.attrib['type']=='wayDefaultParams':
+                        child1[0].attrib['value']='car, bus, pt'
+                        child1[4].attrib['value']='1'
+        # tree.insert(1, ET.Comment('DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd'))
+        tree.write(defaultosmconfig[:-4]+'_mod.xml', encoding='utf-8', xml_declaration=True)
+        path_file=defaultosmconfig[:-4]+'_mod.xml'
+        with open(path_file, "w", encoding='UTF-8') as xf:
+            doc_type = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd">'
+            tostring = ET.tostring(root).decode('utf-8')
+            file = f"{doc_type}{tostring}"
+            xf.write(file)
+        osm2mn=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.Osm2MultimodalNetwork {defaultosmconfig[:-4]+"_mod.xml"}'
+        proc=run(osm2mn, capture_output=True, shell=True, encoding='utf-8')
+        print(proc)
+                    
+                    
+        
     def check_iters_data_with_xml(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
         name_of_file=basename(fname)
@@ -133,7 +211,6 @@ class Example(QWidget):
             map_f.save('C:\\matsim\\minibus\\output_8_dokhrena_2\\folium_maps\\it.100\\'+transitLineId+".html")
     def event_reader(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте XML с events', 'C:\\')[0]
-        import xml.etree.ElementTree as ET
         # import csv
         tree=ET.parse(fname)
         root=tree.getroot()
