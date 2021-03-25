@@ -4,15 +4,17 @@ Created on Sun Feb 14 00:45:30 2021
 
 @author: gammapopolam
 """
-from os import listdir, rename, system, environ
-from os.path import isfile, join, isdir, abspath, basename
+from subprocess import run
+from os import listdir, rename
+
+from os.path import isfile, join, isdir, abspath, basename, dirname, realpath
 import sys
 # import subprocess
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QFileDialog, QInputDialog
 # import folium
 import json
 import xml.etree.ElementTree as ET
-from xml.dom import minidom
+# from xml.dom import minidom
 import geojson
 #from PyQt5.QtGui import QIcon
 
@@ -43,13 +45,17 @@ class Example(QWidget):
         self.setWindowTitle('MATSim')
         self.show()
         
-#    def choose_file(self):
-#        fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[1]
-#        subprocess.check_output(['java', 'Xmx60000m', '-jar', 'C:\\matsim\\minibus\\minibus-12.0-SNAPSHOT.jar', fname])
     def network_gen(self):
         # import re
         fname = QFileDialog.getOpenFileName(self, 'Откройте geojson', 'C:\\')[0]
-        EPSG_CODE='EPSG:'+str(32635)
+        f_path=dirname(realpath(fname))
+        print(f_path)
+        text, ok = QInputDialog.getText(self, 'EPSG Authority code',
+            'Enter EPSG:')
+
+        if ok:
+            epsg=text
+        EPSG_CODE='EPSG:'+str(epsg)
         OUTPUT_F=fname[:-8]+'_conv.osm'
         fj=json.load(open(fname, encoding='utf-8'))
         collection=[]
@@ -59,37 +65,26 @@ class Example(QWidget):
                 linecoords=[]
                 for crds in range(len(fj['features'][fts]['geometry']['coordinates'])):
                     # print(fj['features'][fts]['geometry']['coordinates'][crds])
-                    xy = (fj['features'][fts]['geometry']['coordinates'][crds][1], fj['features'][fts]['geometry']['coordinates'][crds][0])
+                    xy = (fj['features'][fts]['geometry']['coordinates'][crds][0], fj['features'][fts]['geometry']['coordinates'][crds][1])
                     linecoords.append(xy)
                 line=geojson.LineString(linecoords)
-                feature=geojson.Feature(geometry=line)
+                feature=geojson.Feature(geometry=line, properties={'highway': fj['features'][fts]['properties']['highway']})
                 collection.append(feature)
         fet_col=geojson.FeatureCollection(collection)
-        geojson.dump(fet_col, open(fname[:-8]+'_remake.geojson', mode='w', encoding='utf-8'))
         f_remake=fname[:-8]+'_remake.geojson'
-        # f=open(fname, encoding='utf-8').read()
-        # encoded=f.encode('ascii', 'ignore')
-        # print(type(encoded))
-        # decoded=encoded.decode()
-        # print(type(decoded))
-        # re.sub(r'[^\x00-\x7F]+',' ', decoded)
-        # json.dump(decoded, open(fname[:-8]+'_dec.geojson', 'w'))
-        # set_cmd=r'C:\\Users\\gammapopolam\\Anaconda3\\Library\\share\\gdal'
-        # environ['GDAL_DATA']=set_cmd
-        # cmd=f'C:\\Users\\gammapopolam\\Anaconda3\\python.exe C:\\PROGRA~1\\Git\\ogr2osm\\ogr2osm.py {f_remake} {OUTPUT_F} -f'
-        cmd=f'geojsontoosm {fname} > {OUTPUT_F} -f'
-        # print(cmd)
-        # print(system(set_cmd+' ; '+cmd))
-
-        from subprocess import Popen, PIPE, call, check_call, run
+        geojson.dump(fet_col, open(f_remake, mode='w', encoding='utf-8'))
+        cmd=f'geojsontoosm {f_remake} > {OUTPUT_F} -f'
+        
         proc = run(cmd, capture_output=False, shell=True, encoding='utf-8')
-        print(proc)
-        pt2matsim_path=r'C:/matsim/pt2matsim/'
-        defaultosmconfig='C:/matsim/pt2matsim/DefaultOSMConfig.xml'
-        pt2matsim_jar=r'C:/matsim/pt2matsim/pt2matsim-20.8-shaded.jar'
+        # print(proc)
+        
+        defaultosmconfig=f'{f_path}DefaultOSMConfig.xml'
+        
+        pt2matsim_jar=QFileDialog.getOpenFileName(self, 'Откройте  pt2matsim jar', f_path)[0]
+        # pt2matsim_path=pt2matsim_jar-basename(pt2matsim_jar)
         osm2mn_cf=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CreateDefaultOsmConfig {defaultosmconfig}'
         proc=run(osm2mn_cf, capture_output=False, shell=True, encoding='utf-8')
-        print(proc)
+        # print(proc)
 
         tree=ET.parse(defaultosmconfig)
         root=tree.getroot()
@@ -102,9 +97,9 @@ class Example(QWidget):
                     elif child1.attrib['name']=='outputCoordinateSystem':
                         child1.attrib['value']=EPSG_CODE
                     elif child1.attrib['name']=='outputDetailedLinkGeometryFile':
-                        child1.attrib['value']=f'{pt2matsim_path}detailedlinkgeom.csv'
+                        child1.attrib['value']=f'{f_path}\\detailedlinkgeom.csv'
                     elif child1.attrib['name']=='outputNetworkFile':
-                        child1.attrib['value']=f'{pt2matsim_path}osm_network.xml'
+                        child1.attrib['value']=f'{f_path}\\osm_network.xml'
                 if child1.tag == 'parameterset':
                     if child1.attrib['type']=='routableSubnetwork':
                         child1[0].attrib['value']='car, bus, pt'
@@ -124,7 +119,7 @@ class Example(QWidget):
         proc=run(osm2mn, capture_output=True, shell=True, encoding='utf-8')
         print(proc)
                     
-                    
+        
         
     def check_iters_data_with_xml(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
