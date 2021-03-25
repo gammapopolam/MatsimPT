@@ -30,18 +30,18 @@ class Example(QWidget):
 #        btn1=QPushButton('Выбрать конфиг и\n запустить модель', self)
 #        btn1.move(0, 0)
         btn2=QPushButton('Проверить наличие\n новых итераций', self)
-        btn2.move(0, 30)
+        btn2.move(0, 50)
         btn2.clicked.connect(self.check_iters_data_with_xml)
         btn3=QPushButton('Сгенерировать для \nодного файла карты\n с маршрутами', self)
-        btn3.move(0, 70)
+        btn3.move(0, 90)
         # btn3.clicked.connect(self.gen_folium_maps)
         btn4=QPushButton('Чтение файла events\n (максимальная наполняемость)', self)
-        btn4.move(0, 120)
+        btn4.move(0, 140)
         btn4.clicked.connect(self.event_reader)
         btn5=QPushButton('Перевести geojson\n в network.xml', self)
-        btn5.move(0, 170)
+        btn5.move(0, 10)
         btn5.clicked.connect(self.network_gen)
-        self.setGeometry(640, 480, 300, 220)
+        self.setGeometry(300, 220, 640, 480)
         self.setWindowTitle('MATSim')
         self.show()
         
@@ -74,12 +74,8 @@ class Example(QWidget):
         f_remake=fname[:-8]+'_remake.geojson'
         geojson.dump(fet_col, open(f_remake, mode='w', encoding='utf-8'))
         cmd=f'geojsontoosm {f_remake} > {OUTPUT_F} -f'
-        
         proc = run(cmd, capture_output=False, shell=True, encoding='utf-8')
-        # print(proc)
-        
         defaultosmconfig=f'{f_path}DefaultOSMConfig.xml'
-        
         pt2matsim_jar=QFileDialog.getOpenFileName(self, 'Откройте  pt2matsim jar', f_path)[0]
         # pt2matsim_path=pt2matsim_jar-basename(pt2matsim_jar)
         osm2mn_cf=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CreateDefaultOsmConfig {defaultosmconfig}'
@@ -249,5 +245,5 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit()
     print('end')
