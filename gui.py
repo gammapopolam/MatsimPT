@@ -29,40 +29,53 @@ class Example(QWidget):
     def initUI(self):
         grid = QGridLayout()
         grid.setSpacing(5)
+        
         btn1=QPushButton('Перевести geojson\nв osm_network.xml', self)
-        # btn1.move(0, 10)
         btn1.clicked.connect(self.network_gen)
-        btn2=QPushButton('Проверить наличие\nновых итераций', self)
-        # btn2.move(0, 50)
-        btn2.clicked.connect(self.check_iters_data_with_xml)
-        btn3=QPushButton('Сгенерировать для одного файла \nкарты с маршрутами', self)
-        # btn3.move(0, 90)
-        # btn3.clicked.connect(self.gen_folium_maps)
-        btn4=QPushButton('Чтение файла events\n(максимальная наполняемость)', self)
-        # btn4.move(0, 140)
-        btn5=QPushButton('GTFS - пустышка с \nдвумя координатами')
-        btn5.clicked.connect(self.GTFS_dummy)
-        btn4.clicked.connect(self.event_reader)
-        grid.addWidget(btn1, 1, 0)
-        grid.addWidget(btn5, 2, 0)
-        grid.addWidget(btn2, 3, 0)
-        grid.addWidget(btn3, 4, 0)
-        grid.addWidget(btn4, 5, 0)
         btn1_text=QLabel('Использование geojson ТОЛЬКО из overpass-turbo\nво избежание проблем при обработки.')
+        
+        btn2=QPushButton('Обработка geojson в population.xml', self)
+        btn2.clicked.connect(self.population_gen)
+        btn2_text=QLabel(' ')
+        
+        btn3=QPushButton('Запуск minibus', self)
+        btn3.clicked.connect(self.start_minibus)
+        btn3_text=QLabel('Перед запуском убедись, что нажал на верхние кнопки!')
+        
+        btn4=QPushButton('Проверить наличие\nновых итераций', self)
+        btn4.clicked.connect(self.check_iters_data_with_xml)
+        btn4_text=QLabel('Нажимать только во время работы модели;\nкаждую итерацию переводит в geojson')
+        
+        btn5=QPushButton('Сгенерировать для одного файла \nкарты с маршрутами', self)
+        btn5.clicked.connect(self.gen_folium_maps)
+        btn5_text=QLabel('Веб-карты в формате folium. Требует доработки')
+        
+        btn6=QPushButton('Чтение файла events\n(максимальная наполняемость)', self)
+        btn6.clicked.connect(self.event_reader)
+        btn6_text=QLabel('Находит максимальную вместимость каждой техники \nпо модели. Рекомендуется для Этапа 2')
+        
+        grid.addWidget(btn1, 1, 0)
+        grid.addWidget(btn2, 2, 0)
+        grid.addWidget(btn3, 3, 0)
+        grid.addWidget(btn4, 4, 0)
+        grid.addWidget(btn5, 5, 0)
+        grid.addWidget(btn6, 6, 0)
+        
         grid.addWidget(btn1_text, 1, 1, 1, 2)
-        btn5_text=QLabel('Создание GTFS-пустышки для корректной \nработы minibus')
-        grid.addWidget(btn5_text, 2, 1, 1, 2)
-        btn2_text=QLabel('Нажимать только во время работы модели;\nкаждую итерацию переводит в geojson')
-        grid.addWidget(btn2_text, 3, 1, 1, 2)
-        btn3_text=QLabel('Генерирование html карт из geojson')
-        grid.addWidget(btn3_text, 4, 1, 1, 2)
-        btn4_text=QLabel('Обработка Events для исследования\nнаполняемости модели')
-        grid.addWidget(btn4_text, 5, 1, 1, 2)
+        grid.addWidget(btn2_text, 2, 1, 1, 2)
+        grid.addWidget(btn3_text, 3, 1, 1, 2)
+        grid.addWidget(btn4_text, 4, 1, 1, 2)
+        grid.addWidget(btn5_text, 5, 1, 1, 2)
+        grid.addWidget(btn6_text, 6, 1, 1, 2)
+
         self.setLayout(grid)
         self.setGeometry(200, 200, 640, 480)
         self.setWindowTitle('MATSim & Minibus')
         self.show()
-        
+    def population_gen(self):
+        print('ыыыыы')
+    def start_minibus(self):
+        print('ыыыыы')
     def network_gen(self):
         # import re
         fname = QFileDialog.getOpenFileName(self, 'Откройте geojson', 'C:\\')[0]
@@ -70,13 +83,13 @@ class Example(QWidget):
         print(f_path)
         text, ok = QInputDialog.getText(self, 'EPSG Authority code',
             'Enter EPSG:')
-
         if ok:
             epsg=text
         EPSG_CODE='EPSG:'+str(epsg)
         OUTPUT_F=fname[:-8]+'_conv.osm'
         fj=json.load(open(fname, encoding='utf-8'))
         collection=[]
+        print('____Remake geojson')
         for fts in range(len(fj['features'])):
             # print(fj['features'][fts]['geometry'])
             if fj['features'][fts]['geometry']['type']=='LineString':
@@ -91,12 +104,14 @@ class Example(QWidget):
         fet_col=geojson.FeatureCollection(collection)
         f_remake=fname[:-8]+'_remake.geojson'
         geojson.dump(fet_col, open(f_remake, mode='w', encoding='utf-8'))
+        print('____Converting from geojson to osm')
         cmd=f'geojsontoosm {f_remake} > {OUTPUT_F} -f'
         proc = run(cmd, capture_output=False, shell=True, encoding='utf-8')
-        defaultosmconfig=f'{f_path}DefaultOSMConfig.xml'
-        pt2matsim_jar=QFileDialog.getOpenFileName(self, 'Откройте  pt2matsim jar', f_path)[0]
+        defaultosmconfig=f'{f_path}\DefaultOSMConfig.xml'
+        pt2matsim_jar=r'C:/matsim/pt2matsim/pt2matsim-20.8-shaded.jar'
         # pt2matsim_path=pt2matsim_jar-basename(pt2matsim_jar)
         osm2mn_cf=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CreateDefaultOsmConfig {defaultosmconfig}'
+        print('____PT2MATSim DefaultOSMConfig')
         proc=run(osm2mn_cf, capture_output=False, shell=True, encoding='utf-8')
         # print(proc)
 
@@ -130,16 +145,17 @@ class Example(QWidget):
             file = f"{doc_type}{tostring}"
             xf.write(file)
         osm2mn=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.Osm2MultimodalNetwork {defaultosmconfig[:-4]+"_mod.xml"}'
+        print('____PT2MATSim OSM2MultimodalNetwork')
         proc=run(osm2mn, capture_output=True, shell=True, encoding='utf-8')
-        print(proc)
-    def GTFS_dummy(self):
+        # print(proc)
+        print('____GTFS Dummy gen')
         path_for_gtfs_dummy=QFileDialog.getExistingDirectory(self, 'Выберите папку для сохранения GTFS', 'C:\\')
-        text, ok = QInputDialog.getText(self, 'Введите первую пару координат X_Y (EPSG:4326)',
-            'Enter X1_Y1:')
+        text, ok = QInputDialog.getText(self, 'X_Y (EPSG:4326)',
+            'Введите первую пару координат X_Y (EPSG:4326)')
         if ok:
             x1_y1=text
-        text, ok = QInputDialog.getText(self, 'Введите вторую пару координат X_Y (EPSG:4326)',
-            'Enter X2_Y2:')
+        text, ok = QInputDialog.getText(self, 'X_Y (EPSG:4326)',
+            'Введите вторую пару координат X_Y (EPSG:4326):')
         if ok:
             x2_y2=text
         gtfs_dummy=path_for_gtfs_dummy+' '+x1_y1+' '+x2_y2
@@ -158,7 +174,58 @@ class Example(QWidget):
         print('Генерация завершена!')
         print('Путь GTFS:')
         print(path_for_gtfs_dummy+r'\\GTFS_dummy.zip')
+
         
+        
+        import zipfile
+        with zipfile.ZipFile(path_for_gtfs_dummy+r'\\GTFS_dummy.zip', 'r') as zip_ref:
+            zip_ref.extractall(path_for_gtfs_dummy+r'\\GTFS_dummy')
+        gtfs2transitschedule=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.Gtfs2TransitSchedule {path_for_gtfs_dummy+"/GTFS_dummy"} all {EPSG_CODE} {f_path+"/"}transitSchedule.xml {f_path+"/"}PTM_vehicles.xml'
+        # print(gtfs2transitschedule)
+        proc=run(gtfs2transitschedule, capture_output=True, shell=True, encoding='utf-8')
+        # print(proc)
+        print('____PT2MATSim PTMapperConfig')
+        ptmcf=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CreateDefaultPTMapperConfig {f_path+"/PTMapperConfig.xml"}'
+        # print(ptmcf)
+        proc=run(ptmcf, capture_output=False, shell=True, encoding='utf-8')
+        f_ptm=f_path+"\PTMapperConfig.xml"
+        # print(f_ptm)
+        tree1=ET.parse(f_ptm)
+        # print('flag')
+        root1=tree1.getroot()
+        for child in root1:
+            for child1 in child:
+                # print(child1.tag, child1.attrib)
+                if child1.tag == 'param':
+                    # print(child1)
+                    if child1.attrib['name']=='inputNetworkFile':
+                        child1.attrib['value']=f'{f_path}\\osm_network.xml'
+                    elif child1.attrib['name']=='inputScheduleFile':
+                        child1.attrib['value']=f'{f_path}\\transitSchedule.xml'
+                    elif child1.attrib['name']=='outputCoordinateSystem':
+                        child1.attrib['value']=EPSG_CODE
+                    elif child1.attrib['name']=='outputStreetNetworkFile':
+                        child1.attrib['value']=f'{f_path}\\streetnet.csv'
+                    elif child1.attrib['name']=='outputNetworkFile':
+                        child1.attrib['value']=f'{f_path}\\PTM_network.xml'
+                    elif child1.attrib['name']=='outputScheduleFile':
+                        child1.attrib['value']=f'{f_path}\\PTM_schedule.xml'
+        tree1.write(f_path+'\PTMapperConfig_mod.xml', encoding='utf-8', xml_declaration=True)
+        with open(f_path+'\PTMapperConfig_mod.xml', "w", encoding='UTF-8') as xf:
+            doc_type = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd">'
+            tostring = ET.tostring(root1).decode('utf-8')
+            file = f"{doc_type}{tostring}"
+            xf.write(file)
+        print('____PT2MATSim PublicTransitMapper')
+        ptm=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.PublicTransitMapper {f_path+"/PTMapperConfig_mod.xml"}'
+        print(ptm)
+        proc=run(ptm, capture_output=True, shell=True, encoding='utf-8')
+        print(proc)
+        print('____fin')
+        self.transitschedule=f'{f_path}\\PTM_network.xml'
+        self.network=f'{f_path}\\osm_network.xml'
+        self.vehicles=f'{f_path+"/"}PTM_vehicles.xml'
+        self.path=f_path
         
     def check_iters_data_with_xml(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
@@ -269,16 +336,16 @@ class Example(QWidget):
         # for key, val in vehicles.items():
             # f.writerow([key, val])
         # f.close()
-    def closeEvent(self, event):
+    # def closeEvent(self, event):
 
-        reply = QMessageBox.question(self, 'Message',
-            "Are you sure to quit?", QMessageBox.Yes |
-            QMessageBox.No, QMessageBox.No)
+    #     reply = QMessageBox.question(self, 'Message',
+    #         "Are you sure to quit?", QMessageBox.Yes |
+    #         QMessageBox.No, QMessageBox.No)
 
-        if reply == QMessageBox.Yes:
-            event.accept()
-        else:
-            event.ignore()
+    #     if reply == QMessageBox.Yes:
+    #         event.accept()
+    #     else:
+    #         event.ignore()
         
         
         
