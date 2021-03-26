@@ -4,7 +4,7 @@ Created on Sun Feb 14 00:45:30 2021
 
 @author: gammapopolam
 """
-from subprocess import run, check_output
+from subprocess import run, check_output, Popen, PIPE
 from os import listdir, rename
 from os.path import isfile, join, isdir, abspath, basename, dirname, realpath
 import sys
@@ -41,7 +41,7 @@ class Example(QWidget):
         btn4=QPushButton('Чтение файла events\n(максимальная наполняемость)', self)
         # btn4.move(0, 140)
         btn5=QPushButton('GTFS - пустышка с \nдвумя координатами')
-        
+        btn5.clicked.connect(self.GTFS_dummy)
         btn4.clicked.connect(self.event_reader)
         grid.addWidget(btn1, 1, 0)
         grid.addWidget(btn5, 2, 0)
@@ -132,7 +132,32 @@ class Example(QWidget):
         osm2mn=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.Osm2MultimodalNetwork {defaultosmconfig[:-4]+"_mod.xml"}'
         proc=run(osm2mn, capture_output=True, shell=True, encoding='utf-8')
         print(proc)
-                    
+    def GTFS_dummy(self):
+        path_for_gtfs_dummy=QFileDialog.getExistingDirectory(self, 'Выберите папку для сохранения GTFS', 'C:\\')
+        text, ok = QInputDialog.getText(self, 'Введите первую пару координат X_Y (EPSG:4326)',
+            'Enter X1_Y1:')
+        if ok:
+            x1_y1=text
+        text, ok = QInputDialog.getText(self, 'Введите вторую пару координат X_Y (EPSG:4326)',
+            'Enter X2_Y2:')
+        if ok:
+            x2_y2=text
+        gtfs_dummy=path_for_gtfs_dummy+' '+x1_y1+' '+x2_y2
+        print(gtfs_dummy)
+        print('''
+позиции:
+[0] - путь сохранения GTFS_Dummy
+[1] - x_y пара остановки №1
+[2] - x_y пара остановки №2
+по умолчанию время прибытия с остановки 1 на остановку 2 - 3 минуты, т.е. время 22:00:00 - 22:03:00
+''')
+
+        proc=Popen('C:/Python27/python.exe GTFS_dummy.py', stdin=PIPE, stdout=PIPE, universal_newlines=True)
+        # print(proc.stdout.read())
+        proc.communicate(gtfs_dummy, timeout=1)
+        print('Генерация завершена!')
+        print('Путь GTFS:')
+        print(path_for_gtfs_dummy+r'\\GTFS_dummy.zip')
         
         
     def check_iters_data_with_xml(self):
