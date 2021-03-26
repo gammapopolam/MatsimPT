@@ -4,18 +4,18 @@ Created on Sun Feb 14 00:45:30 2021
 
 @author: gammapopolam
 """
-from subprocess import run
+from subprocess import run, check_output
 from os import listdir, rename
-
 from os.path import isfile, join, isdir, abspath, basename, dirname, realpath
 import sys
 # import subprocess
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QFileDialog, QInputDialog
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QFileDialog, QInputDialog, QGridLayout, QLabel
 # import folium
 import json
 import xml.etree.ElementTree as ET
 # from xml.dom import minidom
 import geojson
+# from win32api import GetSystemMetrics
 #from PyQt5.QtGui import QIcon
 
 
@@ -27,22 +27,40 @@ class Example(QWidget):
 
 
     def initUI(self):
-#        btn1=QPushButton('Выбрать конфиг и\n запустить модель', self)
-#        btn1.move(0, 0)
-        btn2=QPushButton('Проверить наличие\n новых итераций', self)
-        btn2.move(0, 50)
+        grid = QGridLayout()
+        grid.setSpacing(5)
+        btn1=QPushButton('Перевести geojson\nв osm_network.xml', self)
+        # btn1.move(0, 10)
+        btn1.clicked.connect(self.network_gen)
+        btn2=QPushButton('Проверить наличие\nновых итераций', self)
+        # btn2.move(0, 50)
         btn2.clicked.connect(self.check_iters_data_with_xml)
-        btn3=QPushButton('Сгенерировать для \nодного файла карты\n с маршрутами', self)
-        btn3.move(0, 90)
+        btn3=QPushButton('Сгенерировать для одного файла \nкарты с маршрутами', self)
+        # btn3.move(0, 90)
         # btn3.clicked.connect(self.gen_folium_maps)
-        btn4=QPushButton('Чтение файла events\n (максимальная наполняемость)', self)
-        btn4.move(0, 140)
+        btn4=QPushButton('Чтение файла events\n(максимальная наполняемость)', self)
+        # btn4.move(0, 140)
+        btn5=QPushButton('GTFS - пустышка с \nдвумя координатами')
+        
         btn4.clicked.connect(self.event_reader)
-        btn5=QPushButton('Перевести geojson\n в network.xml', self)
-        btn5.move(0, 10)
-        btn5.clicked.connect(self.network_gen)
-        self.setGeometry(300, 220, 640, 480)
-        self.setWindowTitle('MATSim')
+        grid.addWidget(btn1, 1, 0)
+        grid.addWidget(btn5, 2, 0)
+        grid.addWidget(btn2, 3, 0)
+        grid.addWidget(btn3, 4, 0)
+        grid.addWidget(btn4, 5, 0)
+        btn1_text=QLabel('Использование geojson ТОЛЬКО из overpass-turbo\nво избежание проблем при обработки.')
+        grid.addWidget(btn1_text, 1, 1, 1, 2)
+        btn5_text=QLabel('Создание GTFS-пустышки для корректной \nработы minibus')
+        grid.addWidget(btn5_text, 2, 1, 1, 2)
+        btn2_text=QLabel('Нажимать только во время работы модели;\nкаждую итерацию переводит в geojson')
+        grid.addWidget(btn2_text, 3, 1, 1, 2)
+        btn3_text=QLabel('Генерирование html карт из geojson')
+        grid.addWidget(btn3_text, 4, 1, 1, 2)
+        btn4_text=QLabel('Обработка Events для исследования\nнаполняемости модели')
+        grid.addWidget(btn4_text, 5, 1, 1, 2)
+        self.setLayout(grid)
+        self.setGeometry(200, 200, 640, 480)
+        self.setWindowTitle('MATSim & Minibus')
         self.show()
         
     def network_gen(self):
@@ -98,10 +116,10 @@ class Example(QWidget):
                         child1.attrib['value']=f'{f_path}\\osm_network.xml'
                 if child1.tag == 'parameterset':
                     if child1.attrib['type']=='routableSubnetwork':
-                        child1[0].attrib['value']='car, bus, pt'
-                        child1[1].attrib['value']='car, bus, pt'
+                        child1[0].attrib['value']='car'
+                        child1[1].attrib['value']='car'
                     elif child1.attrib['type']=='wayDefaultParams':
-                        child1[0].attrib['value']='car, bus, pt'
+                        child1[0].attrib['value']='car'
                         child1[4].attrib['value']='1'
         # tree.insert(1, ET.Comment('DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd'))
         tree.write(defaultosmconfig[:-4]+'_mod.xml', encoding='utf-8', xml_declaration=True)
@@ -148,7 +166,7 @@ class Example(QWidget):
 #                      'C:\\matsim\\pt2matsim\\pt2matsim-20.8-shaded.jar', 
 #                      'org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility',
 #                      inschedfile, net, 'EPSG:'+str(EPSG), foldername+'/'+outtxt)
-                subprocess.check_output(['java', '-cp', 
+                check_output(['java', '-cp', 
                     'C:\\matsim\\pt2matsim\\pt2matsim-20.8-shaded.jar', 
                     'org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility',
                     inschedfile, net, 'EPSG:'+str(EPSG), foldername+'/'+outtxt])
