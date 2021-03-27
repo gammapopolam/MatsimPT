@@ -1,12 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v1.dtd"
-  [
-   <!ENTITY INPUTBASE  "./input/">
-   <!ENTITY OUTPUTBASE "./output/">
-   <!ENTITY SCENARIO "grid10min">
-   <!ENTITY SEED	"0">
-  ]
->
+<!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v1.dtd">
 <config>
 
 <!-- ====================================================================== -->
@@ -108,7 +101,7 @@
 		<param name="eventsFileFormat" value="xml" />
 		<param name="firstIteration" value="0" />
 		<param name="lastIteration" value="400" />
-		<param name="outputDirectory" value="&OUTPUTBASE;&SCENARIO;_&SEED;" />
+		<param name="outputDirectory" value="" />
 
 		<!-- The type of routing (least cost path) algorithm used, may have the values: Dijkstra or AStarLandmarks -->
 		<param name="routingAlgorithmType" value="AStarLandmarks" />
@@ -126,15 +119,15 @@
 <!-- ====================================================================== -->
 
 	<module name="global" >
-		<param name="coordinateSystem" value="GK4" />
+		<param name="coordinateSystem" value="WGS84" />
 		<param name="numberOfThreads" value="2" />
-		<param name="randomSeed" value="&SEED;" />
+		<param name="randomSeed" value="1" />
 	</module>
 
 <!-- ====================================================================== -->
 
 	<module name="network">
-		<param name="inputNetworkFile" value="&INPUTBASE;/network.xml" />
+		<param name="inputNetworkFile" value="" />
 	</module>
 
 <!-- ====================================================================== -->
@@ -197,7 +190,7 @@
 <!-- ====================================================================== -->
 
 	<module name="plans" >
-		<param name="inputPlansFile" value="&INPUTBASE;/population_1000_per_hour_each_from_6_to_10.xml.gz" />
+		<param name="inputPlansFile" value="" />
 	</module>
 
 <!-- ====================================================================== -->
