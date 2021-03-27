@@ -5,7 +5,7 @@
 <!-- ====================================================================== -->
 
 	<module name="p" >
-		<param name="pIdentifier" value="para_" />
+		<param name="pIdentifier" value="p_" />
 		<param name="operatorType" value="CarefulMultiPlanOperator" />
 		<param name="numberOfOperators" value="10" />
 		<param name="numberOfIterationsForProspecting" value="10" />
@@ -27,9 +27,9 @@
 		<param name="minOperationTime" value="0.0" />
 		
 		<param name="minX" value="0.0" />
-		<param name="maxX" value="5000.0" />
+		<param name="maxX" value="10000000.0" />
 		<param name="minY" value="0.0" />
-		<param name="maxY" value="5000.0" />
+		<param name="maxY" value="10000000.0" />
 		
 		<param name="useFranchise" value="true" />
 		<param name="writeStatsInterval" value="1" />
@@ -107,7 +107,7 @@
 		<param name="routingAlgorithmType" value="AStarLandmarks" />
 
 		<!-- An identifier for the current run which is used as prefix for output files and mentioned in output xml files etc. -->
-		<param name="runId" value="&SCENARIO;_&SEED;" />
+		<param name="runId" value="1" />
 
 		<!-- iterationNumber % writeEventsInterval == 0 defines in which iterations events are written to a file. `0' disables events writing completely. -->
 		<param name="writeEventsInterval" value="400" />

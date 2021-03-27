@@ -76,7 +76,16 @@ class Example(QWidget):
         print('ыыыыы')
     def start_minibus(self):
         print('ыыыыы')
-        
+        fname = QFileDialog.getOpenFileName(self, 'Откройте config', 'C:\\')[0]
+        minibus_f=r'C:/matsim/minibus-12.0/minibus-12.0-SNAPSHOT.jar'
+        text, ok = QInputDialog.getText(self, 'java RAM limitation',
+            'Enter RAM limit:')
+        if ok:
+            RAM_limit=f'-Xmx{text}m'
+        minibus_cmd=f'java {RAM_limit} -jar {minibus_f} {fname}'
+        print(minibus_cmd)
+        proc=run(minibus_cmd, capture_output=True, shell=True, encoding='utf-8')
+        print(proc)
     def network_gen(self):
         # import re
         fname = QFileDialog.getOpenFileName(self, 'Откройте geojson', 'C:\\')[0]
@@ -159,6 +168,10 @@ class Example(QWidget):
             'Введите вторую пару координат X_Y (EPSG:4326):')
         if ok:
             x2_y2=text
+        # text, ok = QInputDialog.getText(self, 'X_Y (EPSG:4326)',
+        #     'Введите третью пару координат X_Y (EPSG:4326):')
+        # if ok:
+        #     x3_y3=text
         gtfs_dummy=path_for_gtfs_dummy+' '+x1_y1+' '+x2_y2
         print(gtfs_dummy)
 #         print('''
@@ -224,31 +237,25 @@ class Example(QWidget):
         # print(proc)
         print('____fin')
         self.transitschedule=f'{f_path}\\PTM_network.xml'
-        self.network=f'{f_path}\\osm_network.xml'
+        self.network=f'{f_path}\\PTM_network.xml'
         self.vehicles=f'{f_path}\\PTM_vehicles.xml'
         self.path=f_path
         self.pt2matsim_jar=pt2matsim_jar
         tree2=ET.parse('default_minibus_config.xml')
         root2=tree2.getroot()
-        for child in root1:
+        for child in root2:
             for child1 in child:
-                # print(child1.tag, child1.attrib)
-                if child1.tag == 'controler':
-                    # print(child1)
-                    if child1.attrib['name']=='outputDirectory':
-                        child1.attrib['value']=f'{self.path}'
-                elif child1.tag == 'network':
-                    # print(child1)
-                    if child1.attrib['name']=='inputNetworkFile':
-                        child1.attrib['value']=f'{self.network}'
-                elif child1.tag == 'transit':
-                    # print(child1)
-                    if child1.attrib['name']=='useTransit':
-                        child1.attrib['value']='false'
+                print(child1.tag, child1.attrib)
+                if child1.attrib['name']=='outputDirectory':
+                    child1.attrib['value']=f'{self.path}\output'
+                elif child1.attrib['name']=='inputNetworkFile':
+                    child1.attrib['value']=f'{self.network}'
+                elif child1.attrib['name']=='useTransit':
+                    child1.attrib['value']='false'
         tree2.write(f_path+'\PTM_config.xml', encoding='utf-8', xml_declaration=True)
-        with open(f_path+'\PTMapperConfig_mod.xml', "w", encoding='UTF-8') as xf:
+        with open(f_path+'\PTM_config_mod.xml', "w", encoding='UTF-8') as xf:
             doc_type = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v1.dtd">'
-            tostring = ET.tostring(root1).decode('utf-8')
+            tostring = ET.tostring(root2).decode('utf-8')
             file = f"{doc_type}{tostring}"
             xf.write(file)
         print(f'''
