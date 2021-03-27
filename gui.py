@@ -218,14 +218,20 @@ class Example(QWidget):
             xf.write(file)
         print('____PT2MATSim PublicTransitMapper')
         ptm=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.PublicTransitMapper {f_path+"/PTMapperConfig_mod.xml"}'
-        print(ptm)
+        # print(ptm)
         proc=run(ptm, capture_output=True, shell=True, encoding='utf-8')
-        print(proc)
+        # print(proc)
         print('____fin')
         self.transitschedule=f'{f_path}\\PTM_network.xml'
         self.network=f'{f_path}\\osm_network.xml'
         self.vehicles=f'{f_path+"/"}PTM_vehicles.xml'
         self.path=f_path
+        print(f'''
+MATSim Input data info:
+dir: {self.path}
+transitSchedule: {self.transitschedule}
+network: {self.network}
+vehicles: {self.vehicles}''')
         
     def check_iters_data_with_xml(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
