@@ -227,6 +227,7 @@ class Example(QWidget):
         self.network=f'{f_path}\\osm_network.xml'
         self.vehicles=f'{f_path}\\PTM_vehicles.xml'
         self.path=f_path
+        self.pt2matsim_jar=pt2matsim_jar
         tree2=ET.parse('default_minibus_config.xml')
         root2=tree2.getroot()
         for child in root1:
@@ -260,30 +261,35 @@ vehicles: {self.vehicles}''')
     def check_iters_data_with_xml(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
         name_of_file=basename(fname)
-        f=open(fname, encoding='utf-8')
-        for row in f:
-            if 'ENTITY INPUTBASE' in row:
-                netdir=fname[:-len(name_of_file)]+row[26:-3]
-#                net=QFileDialog.getOpenFileName(self, 'Откройте сеть', netdir)[0]
-            elif 'ENTITY OUTPUTBASE' in row:
-                foldername=fname[:-len(name_of_file)]+row[26:-3]+'ITERS'
-            elif 'ENTITY ITERS' in row:
-                iters=row[19:-3]
-            elif 'ENTITY EPSG' in row:
-                EPSG=row[18:-3]
-            elif 'ENTITY NETWORK' in row:
-                net=fname[:-len(name_of_file)]+row[23:-3]
-#        print(net, foldername, iters, EPSG)
+        tree=ET.parse(fname)
+        root=tree.getroot()
+        for child in root:
+            if child.tag == 'controler':
+                if child.attrib['name']=='outputDirectory':
+                    foldername=child.attrib['value']
+                elif child.attrib['name']=='lastIteration':
+                    iters=child.attrib['value']
+            elif child.tag == 'network':
+                if child.attrib['name']=='inputNetworkFile':
+                    net=child.attrib['value']
+            # elif child.tag == 'transit':
+                # if child1.attrib['name']=='useTransit':
+                    
+                    # child1.attrib['value']='false'
         fls=listdir(path=foldername)
 #        print(fls)
         i=0
+        text, ok = QInputDialog.getText(self, 'EPSG Authority code',
+            'Enter EPSG:')
+        if ok:
+            EPSG=text
         while i!=int(iters)+1:
             i+=1
             txt='it.'+str(i)
             outtxt='it'+str(i)
 #            print(foldername+'/'+outtxt, foldername+'/'+txt)
             if outtxt not in fls and txt in fls:
-                inschedfile=foldername+'/'+txt+'/'+'0.'+str(i)+'.transitSchedule.xml.gz'
+                inschedfile=foldername+'/'+txt+'/'+'1.'+str(i)+'.transitSchedule.xml.gz'
 #                print('java', '-cp', 
 #                      'C:\\matsim\\pt2matsim\\pt2matsim-20.8-shaded.jar', 
 #                      'org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility',
@@ -306,8 +312,6 @@ vehicles: {self.vehicles}''')
             msg.setWindowTitle("Предупреждение")
             msg.exec_()
     def gen_folium_maps(self):
-
-        
         fname = QFileDialog.getOpenFileName(self, 'Откройте GeoJSON', 'C:\\')[0]
         features=json.load(open(fname, encoding='utf-8'))['features']
         transitLineIds_1=[]
