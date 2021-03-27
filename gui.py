@@ -245,13 +245,17 @@ class Example(QWidget):
         root2=tree2.getroot()
         for child in root2:
             for child1 in child:
-                print(child1.tag, child1.attrib)
+                # print(child1.tag, child1.attrib)
                 if child1.attrib['name']=='outputDirectory':
                     child1.attrib['value']=f'{self.path}\output'
                 elif child1.attrib['name']=='inputNetworkFile':
                     child1.attrib['value']=f'{self.network}'
                 elif child1.attrib['name']=='useTransit':
-                    child1.attrib['value']='false'
+                    child1.attrib['value']='true'
+                elif child1.attrib['name']=='transitScheduleFile':
+                    child1.attrib['value']=f'{self.transitschedule}'
+                elif child1.attrib['name']=='vehiclesFile':
+                    child1.attrib['value']=f'{self.vehicles}'
         tree2.write(f_path+'\PTM_config.xml', encoding='utf-8', xml_declaration=True)
         with open(f_path+'\PTM_config_mod.xml', "w", encoding='UTF-8') as xf:
             doc_type = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v1.dtd">'

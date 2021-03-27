@@ -120,7 +120,7 @@
 
 	<module name="global" >
 		<param name="coordinateSystem" value="WGS84" />
-		<param name="numberOfThreads" value="2" />
+		<param name="numberOfThreads" value="4" />
 		<param name="randomSeed" value="1" />
 	</module>
 
@@ -133,7 +133,7 @@
 <!-- ====================================================================== -->
 
 	<module name="parallelEventHandling">
-		<param name="numberOfThreads" value="2" />
+		<param name="numberOfThreads" value="4" />
 	</module>
 
 <!-- ====================================================================== -->
@@ -176,7 +176,7 @@
 		
 		<param name="utilityOfLineSwitch" value="-0.3" />
 
-		<param name="activityType_0"            value="h" />
+		<param name="activityType_0"            value="home" />
 		<param name="activityPriority_0"        value="1" />
 		<param name="activityTypicalDuration_0" value="12:00:00" />
 		<param name="activityMinimalDuration_0" value="08:00:00" />
@@ -201,7 +201,7 @@
 		<param name="flowCapacityFactor" value="1.0" />
 
 		<!-- Use number of threads > 1 for parallel version using the specified number of threads -->
-		<param name="numberOfThreads" value="1" />
+		<param name="numberOfThreads" value="4" />
 
 		<!-- Boolean. `true': stuck vehicles are removed, aborting the plan; `false': stuck vehicles are forced into the next link. `false' is probably the better choice. -->
 		<param name="removeStuckVehicles" value="false" />
