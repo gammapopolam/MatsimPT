@@ -270,58 +270,40 @@ network: {self.network}
 vehicles: {self.vehicles}''')
         
     def check_iters_data_with_xml(self):
+        pt2matsim_jar=r'C:/matsim/pt2matsim/pt2matsim-20.8-shaded.jar'
         fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
         name_of_file=basename(fname)
-        tree=ET.parse(fname)
-        root=tree.getroot()
-        for child in root:
-            if child.tag == 'controler':
-                if child.attrib['name']=='outputDirectory':
-                    foldername=child.attrib['value']
-                elif child.attrib['name']=='lastIteration':
-                    iters=child.attrib['value']
-            elif child.tag == 'network':
-                if child.attrib['name']=='inputNetworkFile':
-                    net=child.attrib['value']
-            # elif child.tag == 'transit':
-                # if child1.attrib['name']=='useTransit':
-                    
-                    # child1.attrib['value']='false'
-        fls=listdir(path=foldername)
-#        print(fls)
-        i=0
+        # print(fname)
         text, ok = QInputDialog.getText(self, 'EPSG Authority code',
             'Enter EPSG:')
         if ok:
             EPSG=text
-        while i!=int(iters)+1:
+        tree=ET.parse(fname)
+        root=tree.getroot()
+        for child in root:
+            for child1 in child:
+                # print(child1.tag, child1.attrib)
+                    if child1.attrib['name']=='outputDirectory':
+                        foldername=child1.attrib['value']
+                    elif child1.attrib['name']=='lastIteration':
+                        iters=child1.attrib['value']
+                    elif child1.attrib['name']=='inputNetworkFile':
+                        net=child1.attrib['value']
+        # print(foldername, net, iters)
+        i=0
+        while i<=int(iters):
+            path_to_iter=foldername+f'\\ITERS\\it.{i}'
+            path_to_plaus_iter=foldername+f'\\ITERS\\it{i}_geojson'
+            
+            
+            iter_schedule=path_to_iter+f'\\1.{i}.transitSchedule.xml.gz'
+            # print(iter_schedule, path_to_plaus_iter)
             i+=1
-            txt='it.'+str(i)
-            outtxt='it'+str(i)
-#            print(foldername+'/'+outtxt, foldername+'/'+txt)
-            if outtxt not in fls and txt in fls:
-                inschedfile=foldername+'/'+txt+'/'+'1.'+str(i)+'.transitSchedule.xml.gz'
-#                print('java', '-cp', 
-#                      'C:\\matsim\\pt2matsim\\pt2matsim-20.8-shaded.jar', 
-#                      'org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility',
-#                      inschedfile, net, 'EPSG:'+str(EPSG), foldername+'/'+outtxt)
-                check_output(['java', '-cp', 
-                    'C:\\matsim\\pt2matsim\\pt2matsim-20.8-shaded.jar', 
-                    'org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility',
-                    inschedfile, net, 'EPSG:'+str(EPSG), foldername+'/'+outtxt])
-                rename(foldername+'/'+outtxt+'/'+'schedule_TransitRoutes.geojson', foldername+'/'+outtxt+'_'+'schedule_TransitRoutes.geojson', )
-                flag=0
-            else:
-                flag=1
-        
-        if int(flag)>0:
-            print(flag)
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Critical)
-            msg.setText("Предупреждение")
-            msg.setInformativeText('Модель не завершила генерацию итераций.')
-            msg.setWindowTitle("Предупреждение")
-            msg.exec_()
+            plaus_cmd=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility {iter_schedule} {net} EPSG:{EPSG} {path_to_plaus_iter}'
+            print(plaus_cmd)
+            proc=run(plaus_cmd, capture_output=True, shell=True, encoding='utf-8')
+            
+            
     def gen_folium_maps(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте GeoJSON', 'C:\\')[0]
         features=json.load(open(fname, encoding='utf-8'))['features']
@@ -355,6 +337,7 @@ vehicles: {self.vehicles}''')
             folium.TileLayer('cartodbpositron').add_to(map_f)
             folium.LayerControl().add_to(map_f)
             map_f.save('C:\\matsim\\minibus\\output_8_dokhrena_2\\folium_maps\\it.100\\'+transitLineId+".html")
+
     def event_reader(self):
         fname = QFileDialog.getOpenFileName(self, 'Откройте XML с events', 'C:\\')[0]
         # import csv
