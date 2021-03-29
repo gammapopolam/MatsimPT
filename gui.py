@@ -77,7 +77,7 @@ class Example(QWidget):
     def start_minibus(self):
         print('ыыыыы')
         fname = QFileDialog.getOpenFileName(self, 'Откройте config', 'C:\\')[0]
-        minibus_f=r'C:/matsim/minibus-12.0/minibus-12.0-SNAPSHOT.jar'
+        minibus_f=r'C:/matsim/yus/minibus-12.0-SNAPSHOT.jar'
         text, ok = QInputDialog.getText(self, 'java RAM limitation',
             'Enter RAM limit:')
         if ok:
@@ -118,7 +118,7 @@ class Example(QWidget):
         cmd=f'geojsontoosm {f_remake} > {OUTPUT_F} -f'
         proc = run(cmd, capture_output=False, shell=True, encoding='utf-8')
         defaultosmconfig=f'{f_path}\DefaultOSMConfig.xml'
-        pt2matsim_jar=r'C:/matsim/pt2matsim/pt2matsim-20.8-shaded.jar'
+        pt2matsim_jar=r'C:/matsim/yus/pt2matsim-20.8-shaded.jar'
         # pt2matsim_path=pt2matsim_jar-basename(pt2matsim_jar)
         osm2mn_cf=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CreateDefaultOsmConfig {defaultosmconfig}'
         print('____PT2MATSim DefaultOSMConfig')
@@ -182,9 +182,10 @@ class Example(QWidget):
 # по умолчанию время прибытия с остановки 1 на остановку 2 - 3 минуты, т.е. время 22:00:00 - 22:03:00
 # ''')
 
-        proc=Popen('C:/Python27/python.exe GTFS_dummy.py', stdin=PIPE, stdout=PIPE, universal_newlines=True)
-        # print(proc.stdout.read())
-        proc.communicate(gtfs_dummy, timeout=1)
+        proc=Popen(f'C:/Python27/python.exe C:/Git/MatsimPT/GTFS_dummy.py \n{gtfs_dummy}', stdin=PIPE, stdout=PIPE, universal_newlines=True)
+        # print(proc.stdout.read()
+        print(gtfs_dummy)
+        # proc.communicate(gtfs_dummy, timeout=5)
         print('____GTFS Dummy gen success!')
         print('____GTFS Dummy path:')
         print(path_for_gtfs_dummy+r'\\GTFS_dummy.zip')
@@ -236,7 +237,7 @@ class Example(QWidget):
         proc=run(ptm, capture_output=True, shell=True, encoding='utf-8')
         # print(proc)
         print('____fin')
-        self.transitschedule=f'{f_path}\\PTM_network.xml'
+        self.transitschedule=f'{f_path}\\PTM_schedule.xml'
         self.network=f'{f_path}\\PTM_network.xml'
         self.vehicles=f'{f_path}\\PTM_vehicles.xml'
         self.path=f_path
@@ -270,7 +271,7 @@ network: {self.network}
 vehicles: {self.vehicles}''')
         
     def check_iters_data_with_xml(self):
-        pt2matsim_jar=r'C:/matsim/pt2matsim/pt2matsim-20.8-shaded.jar'
+        pt2matsim_jar=r'C:/matsim/yus/pt2matsim-20.8-shaded.jar'
         fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
         name_of_file=basename(fname)
         # print(fname)
@@ -383,5 +384,5 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit()
+    sys.exit(app.exec_())
     print('end')
