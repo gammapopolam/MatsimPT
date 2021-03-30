@@ -42,17 +42,21 @@ class Example(QWidget):
         btn3.clicked.connect(self.start_minibus)
         btn3_text=QLabel('Перед запуском убедись, что нажал на верхние кнопки!')
         
-        btn4=QPushButton('Проверить наличие\nновых итераций', self)
+        btn4=QPushButton('Schedule for each iter', self)
         btn4.clicked.connect(self.check_iters_data_with_xml)
-        btn4_text=QLabel('Нажимать только во время работы модели;\nкаждую итерацию переводит в geojson')
+        btn4_text=QLabel('Kаждую итерацию переводит в geojson')
         
-        btn5=QPushButton('Сгенерировать для одного файла \nкарты с маршрутами', self)
-        btn5.clicked.connect(self.gen_folium_maps)
-        btn5_text=QLabel('Веб-карты в формате folium. Требует доработки')
+        btn5=QPushButton('Schedule for output', self)
+        btn5.clicked.connect(self.check_output_data_with_xml)
+        btn5_text=QLabel('Final result переводит в geojson')
         
-        btn6=QPushButton('Чтение файла events\n(максимальная наполняемость)', self)
-        btn6.clicked.connect(self.event_reader)
-        btn6_text=QLabel('Находит максимальную вместимость каждой техники \nпо модели. Рекомендуется для Этапа 2')
+        btn6=QPushButton('Сгенерировать для одного файла \nкарты с маршрутами', self)
+        btn6.clicked.connect(self.gen_folium_maps)
+        btn6_text=QLabel('Веб-карты в формате folium. Требует доработки')
+        
+        btn7=QPushButton('Чтение файла events\n(максимальная наполняемость)', self)
+        btn7.clicked.connect(self.event_reader)
+        btn7_text=QLabel('Находит максимальную вместимость каждой техники \nпо модели. Рекомендуется для Этапа 2')
         
         grid.addWidget(btn1, 1, 0)
         grid.addWidget(btn2, 2, 0)
@@ -60,6 +64,7 @@ class Example(QWidget):
         grid.addWidget(btn4, 4, 0)
         grid.addWidget(btn5, 5, 0)
         grid.addWidget(btn6, 6, 0)
+        grid.addWidget(btn7, 7, 0)
         
         grid.addWidget(btn1_text, 1, 1, 1, 2)
         grid.addWidget(btn2_text, 2, 1, 1, 2)
@@ -67,6 +72,7 @@ class Example(QWidget):
         grid.addWidget(btn4_text, 4, 1, 1, 2)
         grid.addWidget(btn5_text, 5, 1, 1, 2)
         grid.addWidget(btn6_text, 6, 1, 1, 2)
+        grid.addWidget(btn7_text, 7, 1, 1, 2)
 
         self.setLayout(grid)
         self.setGeometry(200, 200, 640, 480)
@@ -303,6 +309,32 @@ vehicles: {self.vehicles}''')
             plaus_cmd=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility {iter_schedule} {net} EPSG:{EPSG} {path_to_plaus_iter}'
             print(plaus_cmd)
             proc=run(plaus_cmd, capture_output=True, shell=True, encoding='utf-8')
+    def check_output_data_with_xml(self):
+        pt2matsim_jar=r'C:/matsim/yus/pt2matsim-20.8-shaded.jar'
+        fname = QFileDialog.getOpenFileName(self, 'Откройте конфиг', 'C:\\')[0]
+        name_of_file=basename(fname)
+        # print(fname)
+        text, ok = QInputDialog.getText(self, 'EPSG Authority code',
+            'Enter EPSG:')
+        if ok:
+            EPSG=text
+        tree=ET.parse(fname)
+        root=tree.getroot()
+        for child in root:
+            for child1 in child:
+                # print(child1.tag, child1.attrib)
+                    if child1.attrib['name']=='outputDirectory':
+                        foldername=child1.attrib['value']
+        from os import listdir
+        for filename in listdir(foldername):
+            if 'transitSchedule' in filename:
+                schedule=foldername+'\\'+filename
+            elif 'network' in filename:
+                net=foldername+'\\'+filename
+                
+        plaus_cmd=f'java -cp {pt2matsim_jar} org.matsim.pt2matsim.run.CheckMappedSchedulePlausibility {schedule} {net} EPSG:{EPSG} {foldername}\\schedule_geojson'
+        print(plaus_cmd)
+        proc=run(plaus_cmd, capture_output=True, shell=True, encoding='utf-8')
             
             
     def gen_folium_maps(self):
