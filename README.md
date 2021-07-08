@@ -26,3 +26,14 @@ GTFS_dummy.py - скрипт-пустышка для того, чтобы сге
 Python 2.7
 
 [out:json];{{geocodeArea:Krasnoyarsk}}->.searchArea;way["highway"](area.searchArea);out body;
+
+
+[out:json][timeout:25];
+
+{{geocodeArea:Красноярск}}->.searchArea;
+(
+  way["highway"](area.searchArea);
+);
+out body;
+>;
+out skel qt;
