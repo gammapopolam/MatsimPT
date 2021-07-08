@@ -23,4 +23,6 @@ GTFS_dummy.py - скрипт-пустышка для того, чтобы сге
  [2] - x_y пара остановки №2
 по умолчанию время прибытия с остановки 1 на остановку 2 - 3 минуты, т.е. время 22:00:00 - 22:03:00
 
-Python 2.7 
+Python 2.7
+
+[out:json];{{geocodeArea:Krasnoyarsk}}->.searchArea;way["highway"](area.searchArea);out body;
