@@ -10,7 +10,7 @@
 		<param name="numberOfOperators" value="10" />
 		<param name="numberOfIterationsForProspecting" value="10" />
 		<param name="initialBudget" value="2001.0" />
-		<param name="paxPerVehicle" value="10" />
+		<param name="paxPerVehicle" value="30" />
 		<param name="passengerCarEquivalents" value="1.0" />
 		<param name="vehicleMaximumVelocity" value="6.0" />
 		<param name="delayPerBoardingPassenger" value="2.0" />
@@ -32,11 +32,11 @@
 		<param name="maxY" value="10000000.0" />
 		
 		<param name="useFranchise" value="true" />
-		<param name="writeStatsInterval" value="1" />
+		<param name="writeStatsInterval" value="10" />
 		<param name="logOperators" value="true" />
 		<param name="writeGexfStatsInterval" value="20" />
 		<param name="routeProvider" value="TimeAwareComplexCircleScheduleProvider" />
-		<param name="speedLimitForStops" value="10.0" />
+		<param name="speedLimitForStops" value="6.0" />
 		<param name="planningSpeedFactor" value="1.0" />
 		<param name="gridSize" value="500.0" />
 		<param name="timeSlotSize" value="900.0" /> 
@@ -110,17 +110,17 @@
 		<param name="runId" value="1" />
 
 		<!-- iterationNumber % writeEventsInterval == 0 defines in which iterations events are written to a file. `0' disables events writing completely. -->
-		<param name="writeEventsInterval" value="400" />
+		<param name="writeEventsInterval" value="10" />
 		
 		<!-- iterationNumber % writePlansInterval == 0 defines (hopefully) in which iterations plans are written to a file. `0' disables plans writing completely.  Some plans in early iterations are always written -->
-		<param name="writePlansInterval" value="400" />
+		<param name="writePlansInterval" value="10" />
 	</module>
 
 <!-- ====================================================================== -->
 
 	<module name="global" >
 		<param name="coordinateSystem" value="WGS84" />
-		<param name="numberOfThreads" value="4" />
+		<param name="numberOfThreads" value="16" />
 		<param name="randomSeed" value="1" />
 	</module>
 
@@ -133,7 +133,7 @@
 <!-- ====================================================================== -->
 
 	<module name="parallelEventHandling">
-		<param name="numberOfThreads" value="4" />
+		<param name="numberOfThreads" value="16" />
 	</module>
 
 <!-- ====================================================================== -->
@@ -201,7 +201,7 @@
 		<param name="flowCapacityFactor" value="1.0" />
 
 		<!-- Use number of threads > 1 for parallel version using the specified number of threads -->
-		<param name="numberOfThreads" value="4" />
+		<param name="numberOfThreads" value="16" />
 
 		<!-- Boolean. `true': stuck vehicles are removed, aborting the plan; `false': stuck vehicles are forced into the next link. `false' is probably the better choice. -->
 		<param name="removeStuckVehicles" value="false" />
