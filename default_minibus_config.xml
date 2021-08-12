@@ -7,11 +7,11 @@
 	<module name="p" >
 		<param name="pIdentifier" value="p_" />
 		<param name="operatorType" value="CarefulMultiPlanOperator" />
-		<param name="numberOfOperators" value="10" />
-		<param name="numberOfIterationsForProspecting" value="10" />
+		<param name="numberOfOperators" value="5" />
+		<param name="numberOfIterationsForProspecting" value="3" />
 		<param name="initialBudget" value="2001.0" />
-		<param name="paxPerVehicle" value="30" />
-		<param name="passengerCarEquivalents" value="1.0" />
+		<param name="paxPerVehicle" value="20" />
+		<param name="passengerCarEquivalents" value="5.0" />
 		<param name="vehicleMaximumVelocity" value="6.0" />
 		<param name="delayPerBoardingPassenger" value="2.0" />
 		<param name="delayPerAlightingPassenger" value="1.0" />
@@ -31,21 +31,23 @@
 		<param name="minY" value="0.0" />
 		<param name="maxY" value="10000000.0" />
 		
-		<param name="useFranchise" value="true" />
+		<param name="useFranchise" value="false" />
 		<param name="writeStatsInterval" value="10" />
 		<param name="logOperators" value="true" />
 		<param name="writeGexfStatsInterval" value="20" />
-		<param name="routeProvider" value="TimeAwareComplexCircleScheduleProvider" />
-		<param name="speedLimitForStops" value="6.0" />
+		<param name="routeProvider" value="SimpleBackAndForthScheduleProvider" />
+		<param name="speedLimitForStops" value="20.0" />
 		<param name="planningSpeedFactor" value="1.0" />
 		<param name="gridSize" value="500.0" />
 		<param name="timeSlotSize" value="900.0" /> 
-		<param name="useAdaptiveNumberOfOperators" value="true" />
-		<param name="shareOfOperatorsWithProfit" value="0.90" />
-		<param name="disableCreationOfNewOperatorsInIteration" value="250" />
-		<param name="reRouteAgentsStuck" value="false" />
+		<param name="useAdaptiveNumberOfOperators" value="false" />
+		<!-- <param name="shareOfOperatorsWithProfit" value="0.90" /> -->
+		<param name="disableCreationOfNewOperatorsInIteration" value="20" />
+		<param name="reRouteAgentsStuck" value="true" />
 		<param name="ptRouter" value="raptor" />
-        
+        	<param name="mergeTransitLine" value="true" />
+		<param name="passengersBoardEveryLine" value="true" />
+		
 		<!-- will calculate common performance metrics if set to true, default is false -->
         <!--<param name="writeMetrics" value="true" />-->
 		
