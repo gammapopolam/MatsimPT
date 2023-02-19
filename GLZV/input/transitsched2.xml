@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE transitSchedule SYSTEM "http://www.matsim.org/files/dtd/transitSchedule_v2.dtd">
+
+<transitSchedule>
+
+	<transitStops>
+		<stopFacility id="158847" x="241047.3131298907" y="6450676.780436135" name="ГПТФ" isBlocking="false"/>
+		<stopFacility id="158848" x="241031.25276612703" y="6451485.437970855" name="Посёлок ПТФ" isBlocking="false"/>
+		<stopFacility id="158849" x="241013.98533873528" y="6451943.927142611" name="Поселок Сыга" isBlocking="false"/>
+		<stopFacility id="158850" x="240635.31773303432" y="6452784.285062073" name="Магазин" isBlocking="false"/>
+		<stopFacility id="158851" x="240441.92680512374" y="6453072.489564518" name="Сыга" isBlocking="false"/>
+		<stopFacility id="158852" x="240625.19556416324" y="6452771.463771887" name="Магазин" isBlocking="false"/>
+		<stopFacility id="158853" x="241348.36941230355" y="6452737.468485103" name="Георгиевское кольцо" isBlocking="false"/>
+		<stopFacility id="158854" x="242374.27146315348" y="6453028.92020323" name="Улица МОПРа" isBlocking="false"/>
+		<stopFacility id="158855" x="242568.2361023413" y="6453292.528928109" name="Улица Гоголя" isBlocking="false"/>
+		<stopFacility id="158856" x="243185.9238039752" y="6452985.4802485835" name="Магазин Снежок" isBlocking="false"/>
+		<stopFacility id="158857" x="243645.78916316837" y="6452756.853386564" name="ГУМ" isBlocking="false"/>
+		<stopFacility id="158858" x="243961.09210211964" y="6452598.594099137" name="Мелодия" isBlocking="false"/>
+		<stopFacility id="158859" x="244610.45642649464" y="6452503.82145264" name="Гостиница Глазов" isBlocking="false"/>
+		<stopFacility id="158860" x="245297.12484856314" y="6452524.882046129" name="Площадь Свободы – Кинотеатр" isBlocking="false"/>
+		<stopFacility id="158861" x="244773.61105696054" y="6451942.810687058" name="Баня" isBlocking="false"/>
+		<stopFacility id="158862" x="245116.00721557115" y="6451757.740384129" name="Вокзал Глазов" isBlocking="false"/>
+		<stopFacility id="158863" x="245823.5230076982" y="6451664.759611332" name="Мебельная фабрика" isBlocking="false"/>
+		<stopFacility id="158864" x="246409.95164346555" y="6451971.10308505" name="Улица Толстого, 40" isBlocking="false"/>
+		<stopFacility id="158865" x="246641.36519406768" y="6452493.712454467" name="Школа № 15" isBlocking="false"/>
+		<stopFacility id="158866" x="246320.45968399505" y="6452593.73834537" name="Улица Калинина" isBlocking="false"/>
+		<stopFacility id="158867" x="245944.07144433277" y="6452352.178663944" name="Улица Толстого, 36" isBlocking="false"/>
+		<stopFacility id="158868" x="245386.49398918173" y="6452616.258793364" name="Площадь Свободы" isBlocking="false"/>
+		<stopFacility id="158869" x="244806.87129317853" y="6452783.925788842" name="Улица Короленко" isBlocking="false"/>
+		<stopFacility id="158870" x="244577.02732398934" y="6452527.930209986" name="Гостиница Глазов" isBlocking="false"/>
+		<stopFacility id="158871" x="244278.0526177754" y="6452546.737759241" name="Дворец спорта" isBlocking="false"/>
+		<stopFacility id="158872" x="243828.8028394206" y="6452690.677710664" name="ДК Россия" isBlocking="false"/>
+		<stopFacility id="158873" x="243108.61973013272" y="6453037.234614863" name="Магазин Снежок" isBlocking="false"/>
+		<stopFacility id="158874" x="242464.7217382719" y="6453359.327310648" name="Улица Гоголя" isBlocking="false"/>
+		<stopFacility id="158875" x="242278.27437151488" y="6453062.641033209" name="Улица МОПРа" isBlocking="false"/>
+		<stopFacility id="158876" x="241294.1853619799" y="6452739.39029622" name="Георгиевское кольцо" isBlocking="false"/>
+		<stopFacility id="158877" x="241003.49949779667" y="6451953.1670830175" name="Поселок Сыга" isBlocking="false"/>
+		<stopFacility id="158878" x="241019.740909606" y="6451461.84316312" name="Посёлок ПТФ" isBlocking="false"/>
+		<stopFacility id="158879" x="244079.3432729097" y="6453430.828671636" name="Советская улица" isBlocking="false"/>
+		<stopFacility id="158880" x="243805.3893837921" y="6452860.59393934" name="ДК Россия" isBlocking="false"/>
+		<stopFacility id="158881" x="243590.1513180407" y="6452417.591105639" name="Гарант" isBlocking="false"/>
+		<stopFacility id="158882" x="243864.16493424974" y="6452247.904546209" name="Улица Наговицына" isBlocking="false"/>
+		<stopFacility id="158883" x="244545.45981139524" y="6452106.900896517" name="Администрация" isBlocking="false"/>
+		<stopFacility id="158884" x="244951.8142684559" y="6453029.4485758" name="Молодёжный клуб Родник" isBlocking="false"/>
+		<stopFacility id="158885" x="244893.95724855794" y="6453789.10847735" name="Водная станция" isBlocking="false"/>
+		<stopFacility id="158886" x="244339.45391525602" y="6453586.124395354" name="Центральная проходная ЧМЗ" isBlocking="false"/>
+		<stopFacility id="158887" x="243419.51678694686" y="6454037.8524410585" name="Западная проходная ЧМЗ" isBlocking="false"/>
+		<stopFacility id="158888" x="243736.63324671218" y="6453731.85192581" name="Южная проходная ЧМЗ" isBlocking="false"/>
+		<stopFacility id="158889" x="243760.54311489774" y="6453736.192713074" name="Южная проходная ЧМЗ" isBlocking="false"/>
+		<stopFacility id="158890" x="243604.2023377359" y="6453307.2899796525" name="Поликлинника" isBlocking="false"/>
+		<stopFacility id="158891" x="243464.26090142044" y="6453007.822023121" name="Полиция" isBlocking="false"/>
+		<stopFacility id="158892" x="245573.68354396254" y="6452191.490381895" name="Хлебокомбинат" isBlocking="false"/>
+		<stopFacility id="158893" x="246095.1983688429" y="6452399.960325789" name="Улица Карла Маркса" isBlocking="false"/>
+		<stopFacility id="158894" x="246490.1474213021" y="6452853.907400437" name="Левобережье" isBlocking="false"/>
+		<stopFacility id="158895" x="246448.3794205092" y="6452534.216784859" name="Сбербанк" isBlocking="false"/>
+		<stopFacility id="158896" x="246639.1638751784" y="6452482.850801315" name="Калининский рынок" isBlocking="false"/>
+		<stopFacility id="158897" x="246731.88122883398" y="6452273.667698129" name="Лицей искусств" isBlocking="false"/>
+		<stopFacility id="158898" x="246354.49227614302" y="6452042.856883869" name="Улица Толстого, 40" isBlocking="false"/>
+		<stopFacility id="158899" x="245914.15838339506" y="6451806.5890698545" name="Улица Буденного" isBlocking="false"/>
+		<stopFacility id="158900" x="245158.0642169254" y="6451763.906812027" name="Вокзал Глазов" isBlocking="false"/>
+		<stopFacility id="158901" x="244612.0427255112" y="6452116.626403509" name="Администрация" isBlocking="false"/>
+		<stopFacility id="158902" x="243942.26951714288" y="6452226.84335008" name="Улица Наговицына" isBlocking="false"/>
+		<stopFacility id="158903" x="243420.95154631013" y="6452435.446005764" name="Прокуратура" isBlocking="false"/>
+		<stopFacility id="158904" x="242978.83108709886" y="6452615.331208072" name="База" isBlocking="false"/>
+		<stopFacility id="158905" x="243177.8973703281" y="6453399.612077103" name="Городская больница" isBlocking="false"/>
+		<stopFacility id="158906" x="243169.27358110482" y="6453411.079437087" name="Городская больница" isBlocking="false"/>
+		<stopFacility id="158907" x="244066.55234521595" y="6453376.20997359" name="Советская улица" isBlocking="false"/>
+		<stopFacility id="158908" x="245183.48019756872" y="6451673.209733833" name="Автовокзал Глазов" isBlocking="false"/>
+		<stopFacility id="158909" x="246658.92124367657" y="6450048.621775807" name="Красногорский тракт" isBlocking="false"/>
+		<stopFacility id="158910" x="248862.00189327693" y="6448224.447708284" name="Поворот на Малый Лудошур" isBlocking="false"/>
+		<stopFacility id="158911" x="250368.87759271773" y="6447438.700032071" name="Поворот на Качкашур" isBlocking="false"/>
+		<stopFacility id="158912" x="255235.18820133107" y="6445100.54239625" name="Поворот на Октябрьский" isBlocking="false"/>
+		<stopFacility id="158913" x="258120.20354450247" y="6443076.525755279" name="Поворот на Трубашур" isBlocking="false"/>
+		<stopFacility id="158914" x="258898.0295234646" y="6441967.842851974" name="Туктым" isBlocking="false"/>
+		<stopFacility id="158915" x="260806.50835594413" y="6438865.337935536" name="Поворот на Кестым" isBlocking="false"/>
+		<stopFacility id="158916" x="261969.54607522528" y="6438797.151955791" name="Кестым" isBlocking="false"/>
+		<stopFacility id="158917" x="263736.96280350455" y="6435674.980083214" name="Кожило" isBlocking="false"/>
+		<stopFacility id="158918" x="263900.51831897756" y="6434910.531032855" name="Льнозавод" isBlocking="false"/>
+		<stopFacility id="158919" x="263871.9914032192" y="6432839.032421977" name="Вокзал Балезино" isBlocking="false"/>
+		<stopFacility id="158920" x="263904.51176900836" y="6434973.1848942535" name="Льнозавод" isBlocking="false"/>
+		<stopFacility id="158921" x="263757.2287680487" y="6435660.269595988" name="Кожило" isBlocking="false"/>
+		<stopFacility id="158922" x="261986.41584080653" y="6438817.6632383" name="Кестым" isBlocking="false"/>
+		<stopFacility id="158923" x="260822.76021818788" y="6438866.204062851" name="Поворот на Кестым" isBlocking="false"/>
+		<stopFacility id="158924" x="258899.0456870284" y="6441984.604532221" name="Туктым" isBlocking="false"/>
+		<stopFacility id="158925" x="257830.16774242758" y="6443429.111082677" name="Поворот на Трубашур" isBlocking="false"/>
+		<stopFacility id="158926" x="255224.51055679852" y="6445156.93438234" name="Поворот на Октябрьский" isBlocking="false"/>
+		<stopFacility id="158927" x="250345.74779044781" y="6447491.542586641" name="Поворот на Качкашур" isBlocking="false"/>
+		<stopFacility id="158928" x="248494.64549924945" y="6448438.858717918" name="Поворот на Малый Лудошур" isBlocking="false"/>
+		<stopFacility id="158929" x="246598.21842278691" y="6450734.437596411" name="Электросети" isBlocking="false"/>
+		<stopFacility id="158930" x="245210.0139303841" y="6451715.91892414" name="Автовокзал Глазов" isBlocking="false"/>
+		<stopFacility id="158931" x="246277.99107752158" y="6450844.968588634" name="Глазов-Электрон" isBlocking="false"/>
+		<stopFacility id="158932" x="246051.91948897683" y="6450927.509474952" name="Молокозавод" isBlocking="false"/>
+		<stopFacility id="158933" x="245619.63940230035" y="6451080.049020737" name="Пищезавод" isBlocking="false"/>
+		<stopFacility id="158934" x="245204.85801242752" y="6451220.846153957" name="АТП" isBlocking="false"/>
+		<stopFacility id="158935" x="244953.13814072494" y="6451308.886786862" name="Реммаш" isBlocking="false"/>
+		<stopFacility id="158936" x="244638.88003847422" y="6451417.456293111" name="Аграрно-промышленный техникум" isBlocking="false"/>
+		<stopFacility id="158937" x="244879.74401392395" y="6453044.820771137" name="Молодёжный клуб Родник" isBlocking="false"/>
+		<stopFacility id="158938" x="244468.61031890076" y="6453270.288552829" name="Детская художественная школа" isBlocking="false"/>
+		<stopFacility id="158939" x="244337.70396629997" y="6452479.516209443" name="Дворец спорта" isBlocking="false"/>
+		<stopFacility id="158940" x="244580.93414735032" y="6451419.272025615" name="Аграрно-промышленный техникум" isBlocking="false"/>
+		<stopFacility id="158941" x="244998.28975377406" y="6451279.533552015" name="Реммаш" isBlocking="false"/>
+		<stopFacility id="158942" x="245341.75451646282" y="6451159.4523878535" name="АТП" isBlocking="false"/>
+		<stopFacility id="158943" x="245625.4677062142" y="6451062.257220548" name="Пищезавод" isBlocking="false"/>
+		<stopFacility id="158944" x="246067.96291572315" y="6450905.937999936" name="Молокозавод" isBlocking="false"/>
+		<stopFacility id="158945" x="246290.15257981644" y="6450829.033951324" name="Глазов-Электрон" isBlocking="false"/>
+		<stopFacility id="158946" x="246599.88817264387" y="6450701.437367445" name="Электросети" isBlocking="false"/>
+		<stopFacility id="158947" x="244650.2513051836" y="6450804.960140799" name="Колхозная улица" isBlocking="false"/>
+		<stopFacility id="158948" x="241666.21071027618" y="6451895.658443025" name="Техническая улица" isBlocking="false"/>
+		<stopFacility id="158949" x="242280.69736754868" y="6451815.9452779945" name="Старое кладбище" isBlocking="false"/>
+		<stopFacility id="158950" x="242762.95785360545" y="6451750.5573211275" name="Заводские коттеджи" isBlocking="false"/>
+		<stopFacility id="158951" x="243361.48043865518" y="6451558.998898185" name="Ивушка" isBlocking="false"/>
+		<stopFacility id="158952" x="243539.30758379123" y="6451856.336568967" name="Колледж" isBlocking="false"/>
+		<stopFacility id="158953" x="244364.9599399657" y="6451490.322261382" name="Профучилище" isBlocking="false"/>
+		<stopFacility id="158954" x="244353.10536820037" y="6451515.996132611" name="Профучилище" isBlocking="false"/>
+		<stopFacility id="158955" x="243486.4384744199" y="6451920.053375317" name="Колледж" isBlocking="false"/>
+		<stopFacility id="158956" x="243298.65165987719" y="6451582.0491325" name="Ивушка" isBlocking="false"/>
+		<stopFacility id="158957" x="242723.8903639073" y="6451772.26165601" name="Заводские коттеджи" isBlocking="false"/>
+		<stopFacility id="158958" x="242219.49432097134" y="6451838.219674567" name="Старое кладбище" isBlocking="false"/>
+		<stopFacility id="158959" x="241538.5265858632" y="6451929.543910517" name="Техническая улица" isBlocking="false"/>
+		<stopFacility id="158960" x="255444.595638031" y="6451607.323951641" name="Адам" isBlocking="false"/>
+		<stopFacility id="158961" x="254942.64388141315" y="6451836.0231098905" name="Советская улица" isBlocking="false"/>
+		<stopFacility id="158962" x="254680.98734839325" y="6451967.878829575" name="Пионерлагерь Звёздочка" isBlocking="false"/>
+		<stopFacility id="158963" x="253616.7540714002" y="6452432.369286359" name="Дом отдыха Чепца" isBlocking="false"/>
+		<stopFacility id="158964" x="252918.42025525775" y="6452608.5013379725" name="СНТ Колос" isBlocking="false"/>
+		<stopFacility id="158965" x="251539.58547193004" y="6452927.329819197" name="СНТ Строитель" isBlocking="false"/>
+		<stopFacility id="158966" x="250385.39017202094" y="6453122.780094555" name="Водозабор" isBlocking="false"/>
+		<stopFacility id="158967" x="249209.7934116141" y="6453084.796255267" name="Иднакар" isBlocking="false"/>
+		<stopFacility id="158968" x="247168.21469135088" y="6453566.603978515" name="Хутор" isBlocking="false"/>
+		<stopFacility id="158969" x="245506.90633127265" y="6452605.320773006" name="Площадь Свободы" isBlocking="false"/>
+		<stopFacility id="158970" x="247192.94033442668" y="6453545.0606459305" name="Хутор" isBlocking="false"/>
+		<stopFacility id="158971" x="249265.21464567108" y="6453069.888734188" name="Иднакар" isBlocking="false"/>
+		<stopFacility id="158972" x="250300.17088315455" y="6453097.682492414" name="Водозабор" isBlocking="false"/>
+		<stopFacility id="158973" x="251556.18167289195" y="6452899.775850495" name="СНТ Строитель" isBlocking="false"/>
+		<stopFacility id="158974" x="252930.0002197196" y="6452585.870248456" name="СНТ Колос" isBlocking="false"/>
+		<stopFacility id="158975" x="253673.80740165082" y="6452402.6981022125" name="Дом отдыха Чепца" isBlocking="false"/>
+		<stopFacility id="158976" x="254702.51683074364" y="6451939.69239787" name="Пионерлагерь Звёздочка" isBlocking="false"/>
+		<stopFacility id="158977" x="254961.44421610155" y="6451814.723843485" name="Советская улица" isBlocking="false"/>
+		<stopFacility id="158978" x="243630.79041583266" y="6452463.445440916" name="Телеателье" isBlocking="false"/>
+		<stopFacility id="158979" x="243783.46116791407" y="6452777.15183538" name="ДК Россия" isBlocking="false"/>
+		<stopFacility id="158980" x="244358.7459179572" y="6453578.626508198" name="Центральная проходная ЧМЗ" isBlocking="false"/>
+		<stopFacility id="158981" x="244909.76580015454" y="6453770.434021145" name="Водная станция" isBlocking="false"/>
+		<stopFacility id="158982" x="244950.10558874175" y="6453080.1687199995" name="Молодёжный клуб Родник" isBlocking="false"/>
+		<stopFacility id="158983" x="244309.91650695875" y="6450986.44055798" name="ТЦ Орбита" isBlocking="false"/>
+		<stopFacility id="158984" x="244209.48880220286" y="6450708.332488057" name="Колхозная улица" isBlocking="false"/>
+		<stopFacility id="158985" x="243809.27467844507" y="6450016.614917496" name="Штанигурт" isBlocking="false"/>
+		<stopFacility id="158986" x="242861.25790411228" y="6448703.582770452" name="Полынга" isBlocking="false"/>
+		<stopFacility id="158987" x="240958.75691402372" y="6447092.205374238" name="Азамай" isBlocking="false"/>
+		<stopFacility id="158988" x="240206.15863769408" y="6445961.14983147" name="Поворот на Сергеевку" isBlocking="false"/>
+		<stopFacility id="158989" x="237710.48042342445" y="6443457.444149893" name="СНТ Берёзка" isBlocking="false"/>
+		<stopFacility id="158990" x="237059.90246348118" y="6443123.505134507" name="СНТ Керамика" isBlocking="false"/>
+		<stopFacility id="158991" x="236771.78381094866" y="6441965.87368539" name="Педоново" isBlocking="false"/>
+		<stopFacility id="158992" x="234677.22819134127" y="6440830.223801181" name="Горлица" isBlocking="false"/>
+		<stopFacility id="158993" x="232593.09256053786" y="6439925.892737851" name="Поворот на Удмуртские Ключи" isBlocking="false"/>
+		<stopFacility id="158994" x="231456.7643433765" y="6437299.946546769" name="Гулеково" isBlocking="false"/>
+		<stopFacility id="158995" x="229942.2290419106" y="6434500.914769416" name="Бабино" isBlocking="false"/>
+		<stopFacility id="158996" x="229100.9617180609" y="6433436.4506382095" name="Макшур" isBlocking="false"/>
+		<stopFacility id="158997" x="226570.38192994957" y="6432051.547669693" name="Поворот на Кокси" isBlocking="false"/>
+		<stopFacility id="158998" x="225182.27352480765" y="6431534.262573844" name="Палагай" isBlocking="false"/>
+		<stopFacility id="158999" x="221827.61452145112" y="6429194.493632592" name="Куркан" isBlocking="false"/>
+		<stopFacility id="159000" x="219838.58097929548" y="6427227.850576749" name="Чурашур" isBlocking="false"/>
+		<stopFacility id="159001" x="218542.51238902903" y="6426121.839768836" name="Автостанция Юкаменское" isBlocking="false"/>
+		<stopFacility id="159002" x="219908.91387133213" y="6427302.68898058" name="Чурашур" isBlocking="false"/>
+		<stopFacility id="159003" x="221878.71362958592" y="6429200.183917596" name="Куркан" isBlocking="false"/>
+		<stopFacility id="159004" x="225228.09550692688" y="6431542.580093887" name="Палагай" isBlocking="false"/>
+		<stopFacility id="159005" x="226675.70565628854" y="6432114.7435787665" name="Поворот на Кокси" isBlocking="false"/>
+		<stopFacility id="159006" x="229144.5939547494" y="6433468.301502177" name="Макшур" isBlocking="false"/>
+		<stopFacility id="159007" x="229989.1258024401" y="6434511.198734804" name="Бабино" isBlocking="false"/>
+		<stopFacility id="159008" x="231490.48788272362" y="6437321.197228828" name="Гулеково" isBlocking="false"/>
+		<stopFacility id="159009" x="232675.1544656293" y="6440055.54646654" name="Поворот на Удмуртские Ключи" isBlocking="false"/>
+		<stopFacility id="159010" x="234769.90020713693" y="6440897.457156636" name="Горлица" isBlocking="false"/>
+		<stopFacility id="159011" x="236820.5338209998" y="6441968.048314203" name="Педоново" isBlocking="false"/>
+		<stopFacility id="159012" x="237127.4972100414" y="6443216.376013336" name="СНТ Керамика" isBlocking="false"/>
+		<stopFacility id="159013" x="237796.0232963573" y="6443459.263509814" name="СНТ Берёзка" isBlocking="false"/>
+		<stopFacility id="159014" x="240248.21511436393" y="6445981.687128685" name="Поворот на Сергеевку" isBlocking="false"/>
+		<stopFacility id="159015" x="241022.94445683277" y="6447154.635610481" name="Азамай" isBlocking="false"/>
+		<stopFacility id="159016" x="242904.27469267967" y="6448711.734537086" name="Полынга" isBlocking="false"/>
+		<stopFacility id="159017" x="243870.3415509334" y="6450084.263339083" name="Штанигурт" isBlocking="false"/>
+		<stopFacility id="159018" x="244211.943310549" y="6450664.003616439" name="Колхозная улица" isBlocking="false"/>
+		<stopFacility id="159019" x="247156.6833909316" y="6453652.5857881885" name="Хутор" isBlocking="false"/>
+		<stopFacility id="159020" x="247768.55130247847" y="6455781.16710249" name="База ДРСУ" isBlocking="false"/>
+		<stopFacility id="159021" x="248516.60453977477" y="6456946.015433488" name="СНТ Росинка" isBlocking="false"/>
+		<stopFacility id="159022" x="250101.99030960185" y="6458507.978941343" name="Симашур" isBlocking="false"/>
+		<stopFacility id="159023" x="251665.14660294756" y="6460377.796745275" name="Полдарай" isBlocking="false"/>
+		<stopFacility id="159024" x="253683.9162408711" y="6462709.603618063" name="Ескино" isBlocking="false"/>
+		<stopFacility id="159025" x="254509.8761810877" y="6463709.464242863" name="Улица Труда" isBlocking="false"/>
+		<stopFacility id="159026" x="254576.9125837552" y="6464393.863047454" name="Детский дом" isBlocking="false"/>
+		<stopFacility id="159027" x="254602.5207173059" y="6465119.379241851" name="Понино" isBlocking="false"/>
+		<stopFacility id="159028" x="255552.93800273057" y="6469002.905050834" name="Паслоково" isBlocking="false"/>
+		<stopFacility id="159029" x="255831.11817241102" y="6471262.014669914" name="Золотарёво" isBlocking="false"/>
+		<stopFacility id="159030" x="258069.70997962743" y="6474576.179455722" name="Пудвай" isBlocking="false"/>
+		<stopFacility id="159031" x="255851.9201366582" y="6471231.574095456" name="Золотарёво" isBlocking="false"/>
+		<stopFacility id="159032" x="255512.5334310199" y="6468920.905526591" name="Паслоково" isBlocking="false"/>
+		<stopFacility id="159033" x="254577.00922911166" y="6465100.82435098" name="Понино" isBlocking="false"/>
+		<stopFacility id="159034" x="254564.77551200305" y="6464365.856492707" name="Детский дом" isBlocking="false"/>
+		<stopFacility id="159035" x="254488.56337812712" y="6463707.224056197" name="Улица Труда" isBlocking="false"/>
+		<stopFacility id="159036" x="253606.9301408434" y="6462647.606179946" name="Ескино" isBlocking="false"/>
+		<stopFacility id="159037" x="251580.517978555" y="6460288.458051317" name="Полдарай" isBlocking="false"/>
+		<stopFacility id="159038" x="250035.1306934167" y="6458453.18772375" name="Симашур" isBlocking="false"/>
+		<stopFacility id="159039" x="248478.75515827542" y="6456915.594607422" name="СНТ Росинка" isBlocking="false"/>
+		<stopFacility id="159040" x="247732.56885782842" y="6455765.263737967" name="База ДРСУ" isBlocking="false"/>
+		<stopFacility id="159041" x="247127.8331012891" y="6453649.185099529" name="Хутор" isBlocking="false"/>
+		<stopFacility id="159042" x="246084.54854110457" y="6452243.882963014" name="Улица Толстого, 38" isBlocking="false"/>
+		<stopFacility id="159043" x="242289.6132839944" y="6453455.461955182" name="Стройкерамика" isBlocking="false"/>
+		<stopFacility id="159044" x="245681.29679628552" y="6452508.287164074" name="ТЦ Пассаж" isBlocking="false"/>
+		<stopFacility id="159045" x="246048.6235654713" y="6452245.839472875" name="Улица Толстого, 38" isBlocking="false"/>
+		<stopFacility id="159046" x="256152.66046904228" y="6455739.360492123" name="СНТ Заречье" isBlocking="false"/>
+		<stopFacility id="159047" x="255270.69350456793" y="6455005.497238953" name="СНТ Металлист" isBlocking="false"/>
+		<stopFacility id="159048" x="254246.51449166288" y="6455381.493380613" name="СНТ Урал" isBlocking="false"/>
+		<stopFacility id="159049" x="253397.4275362124" y="6455313.491791144" name="СНТ Родник" isBlocking="false"/>
+		<stopFacility id="159050" x="253482.15905376358" y="6454466.10788809" name="СНТ Жаворонок" isBlocking="false"/>
+		<stopFacility id="159051" x="253482.0693647086" y="6452626.618691544" name="Ресторан Армения" isBlocking="false"/>
+		<stopFacility id="159052" x="253502.85770951875" y="6452587.683389841" name="Ресторан Армения" isBlocking="false"/>
+		<stopFacility id="159053" x="253490.9609582258" y="6454449.893458062" name="СНТ Жаворонок" isBlocking="false"/>
+		<stopFacility id="159054" x="253429.37745383257" y="6455331.120096838" name="СНТ Родник" isBlocking="false"/>
+		<stopFacility id="159055" x="254223.5832550989" y="6455384.182782442" name="СНТ Урал" isBlocking="false"/>
+		<stopFacility id="159056" x="255258.06379863436" y="6454993.145986293" name="СНТ Металлист" isBlocking="false"/>
+		<stopFacility id="159057" x="247476.88053835082" y="6450572.113634572" name="САХ" isBlocking="false"/>
+		<stopFacility id="159058" x="247175.96105904278" y="6450846.071637474" name="Микрорайон Никольский" isBlocking="false"/>
+		<stopFacility id="159059" x="246635.53988798804" y="6451127.625606355" name="Леспром" isBlocking="false"/>
+		<stopFacility id="159060" x="246412.6137897015" y="6451325.011974659" name="Водоканал" isBlocking="false"/>
+		<stopFacility id="159061" x="246483.19725201163" y="6451778.489335547" name="Улица Пехтина" isBlocking="false"/>
+		<stopFacility id="159062" x="241915.71786917615" y="6452948.931048588" name="Переезд" isBlocking="false"/>
+		<stopFacility id="159063" x="241434.9100904022" y="6453080.78027354" name="Гортоп" isBlocking="false"/>
+		<stopFacility id="159064" x="241086.99417061202" y="6453170.426373091" name="ГК Химмаш" isBlocking="false"/>
+		<stopFacility id="159065" x="240809.6554208813" y="6453245.100640474" name="Химмаш" isBlocking="false"/>
+		<stopFacility id="159066" x="240797.7067466381" y="6453229.1685108915" name="Химмаш" isBlocking="false"/>
+		<stopFacility id="159067" x="241124.33552943633" y="6453145.655337496" name="ГК Химмаш" isBlocking="false"/>
+		<stopFacility id="159068" x="241459.3800438429" y="6453057.632222528" name="Гортоп" isBlocking="false"/>
+		<stopFacility id="159069" x="241932.2382049039" y="6452925.587974126" name="Переезд" isBlocking="false"/>
+		<stopFacility id="159070" x="246409.8618149074" y="6451714.320629061" name="Улица Пехтина" isBlocking="false"/>
+		<stopFacility id="159071" x="246353.36152503718" y="6451358.948532536" name="Водоканал" isBlocking="false"/>
+		<stopFacility id="159072" x="246660.7710002511" y="6451076.131214129" name="Леспром" isBlocking="false"/>
+		<stopFacility id="159073" x="247145.45564887192" y="6450840.08988757" name="Микрорайон Никольский" isBlocking="false"/>
+		<stopFacility id="159074" x="240287.56012392283" y="6453490.084513995" name="УМиАТ" isBlocking="false"/>
+		<stopFacility id="159075" x="240428.05233048042" y="6454051.86192034" name="Оскон" isBlocking="false"/>
+		<stopFacility id="159076" x="240269.66899045528" y="6453480.488588483" name="УМиАТ" isBlocking="false"/>
+		<stopFacility id="159077" x="248854.70892363775" y="6450233.707276013" name="Лекшур" isBlocking="false"/>
+		<stopFacility id="159078" x="247493.4387459638" y="6450587.2481403705" name="САХ" isBlocking="false"/>
+		<stopFacility id="159079" x="244408.1358954488" y="6451143.469035383" name="Улица Циолковского" isBlocking="false"/>
+		<stopFacility id="159080" x="244959.04993842365" y="6450949.552192899" name="Пионерская улица" isBlocking="false"/>
+		<stopFacility id="159081" x="245307.32654072228" y="6450619.446665543" name="Микрорайон Южный" isBlocking="false"/>
+		<stopFacility id="159082" x="245932.14242313808" y="6450289.723415329" name="Улица Куйбышева" isBlocking="false"/>
+		<stopFacility id="159083" x="246299.9398345184" y="6450144.477307339" name="Планета" isBlocking="false"/>
+		<stopFacility id="159084" x="255476.791721812" y="6451559.125447651" name="Адам" isBlocking="false"/>
+		<stopFacility id="159085" x="257727.261397362" y="6450924.950951457" name="Заболотное" isBlocking="false"/>
+		<stopFacility id="159086" x="260423.52980934572" y="6451644.622602036" name="Кельдыково" isBlocking="false"/>
+		<stopFacility id="159087" x="262085.6052523495" y="6452885.413410296" name="Долгоево" isBlocking="false"/>
+		<stopFacility id="159088" x="264053.3385901123" y="6453730.0013637645" name="СНТ Россиянка" isBlocking="false"/>
+		<stopFacility id="159089" x="264863.0472482326" y="6454794.832597177" name="Кортышево" isBlocking="false"/>
+		<stopFacility id="159090" x="266204.247037463" y="6456202.563192033" name="Кабаково" isBlocking="false"/>
+		<stopFacility id="159091" x="268421.6148093061" y="6457336.553788973" name="Корегово" isBlocking="false"/>
+		<stopFacility id="159092" x="271889.0172824353" y="6460025.6257697735" name="Мувыръяг" isBlocking="false"/>
+		<stopFacility id="159093" x="272295.32187632675" y="6460411.680814255" name="Самки" isBlocking="false"/>
+		<stopFacility id="159094" x="273840.9403505899" y="6459629.469641398" name="Адам" isBlocking="false"/>
+		<stopFacility id="159095" x="274632.7194468011" y="6459811.174442987" name="Васютенки" isBlocking="false"/>
+		<stopFacility id="159096" x="275952.88940741424" y="6460644.211854749" name="Карсовай" isBlocking="false"/>
+		<stopFacility id="159097" x="274526.56641556555" y="6459810.596780374" name="Васютенки" isBlocking="false"/>
+		<stopFacility id="159098" x="273774.3262187131" y="6459663.130340963" name="Адам" isBlocking="false"/>
+		<stopFacility id="159099" x="272228.5734324686" y="6460415.212201345" name="Самки" isBlocking="false"/>
+		<stopFacility id="159100" x="271849.0652569394" y="6459951.812485623" name="Мувыръяг" isBlocking="false"/>
+		<stopFacility id="159101" x="268331.4579289353" y="6457318.56498793" name="Корегово" isBlocking="false"/>
+		<stopFacility id="159102" x="266088.4747289776" y="6456156.439069524" name="Кабаково" isBlocking="false"/>
+		<stopFacility id="159103" x="264802.82972095086" y="6454718.3749704" name="Кортышево" isBlocking="false"/>
+		<stopFacility id="159104" x="264175.1726132163" y="6453803.666664185" name="СНТ Россиянка" isBlocking="false"/>
+		<stopFacility id="159105" x="261937.32081732678" y="6452851.273745263" name="Долгоево" isBlocking="false"/>
+		<stopFacility id="159106" x="260327.58394169805" y="6451581.712019957" name="Кельдыково" isBlocking="false"/>
+		<stopFacility id="159107" x="257685.59891409552" y="6450963.603773358" name="Заболотное" isBlocking="false"/>
+	</transitStops>
+	<transitLine id="15119" name="А5">
+		<transitRoute id="15119_12736">
+			<description>shapeId:shape_15119_12736</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158847" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158848" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158849" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158850" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="158851" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158852" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158853" arrivalOffset="00:15:00" departureOffset="00:15:00" awaitDeparture="true"/>
+				<stop refId="158854" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158855" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:28:00" departureOffset="00:28:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:31:00" departureOffset="00:31:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158861" arrivalOffset="00:40:00" departureOffset="00:40:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:42:00" departureOffset="00:42:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:45:00" departureOffset="00:45:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:53:00" departureOffset="00:53:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:54:00" departureOffset="00:54:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:56:00" departureOffset="00:56:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:58:00" departureOffset="00:58:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="01:02:00" departureOffset="01:02:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="01:04:00" departureOffset="01:04:00" awaitDeparture="true"/>
+				<stop refId="158871" arrivalOffset="01:05:00" departureOffset="01:05:00" awaitDeparture="true"/>
+				<stop refId="158872" arrivalOffset="01:07:00" departureOffset="01:07:00" awaitDeparture="true"/>
+				<stop refId="158873" arrivalOffset="01:10:00" departureOffset="01:10:00" awaitDeparture="true"/>
+				<stop refId="158874" arrivalOffset="01:13:00" departureOffset="01:13:00" awaitDeparture="true"/>
+				<stop refId="158875" arrivalOffset="01:14:00" departureOffset="01:14:00" awaitDeparture="true"/>
+				<stop refId="158876" arrivalOffset="01:19:00" departureOffset="01:19:00" awaitDeparture="true"/>
+				<stop refId="158850" arrivalOffset="01:22:00" departureOffset="01:22:00" awaitDeparture="true"/>
+				<stop refId="158851" arrivalOffset="01:23:00" departureOffset="01:23:00" awaitDeparture="true"/>
+				<stop refId="158852" arrivalOffset="01:24:00" departureOffset="01:24:00" awaitDeparture="true"/>
+				<stop refId="158877" arrivalOffset="01:29:00" departureOffset="01:29:00" awaitDeparture="true"/>
+				<stop refId="158878" arrivalOffset="01:31:00" departureOffset="01:31:00" awaitDeparture="true"/>
+				<stop refId="158847" arrivalOffset="01:34:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15119_12736_05:30:00" departureTime="05:30:00" vehicleRefId="veh_0_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15120" name="А2">
+	</transitLine>
+	<transitLine id="15121" name="А12">
+		<transitRoute id="15120_12737">
+			<description>shapeId:shape_15120_12737</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158879" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158880" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158881" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158882" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="158883" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:15:00" departureOffset="00:15:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:28:00" departureOffset="00:28:00" awaitDeparture="true"/>
+				<stop refId="158884" arrivalOffset="00:31:00" departureOffset="00:31:00" awaitDeparture="true"/>
+				<stop refId="158885" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158886" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158879" arrivalOffset="00:37:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15120_12737_05:30:00" departureTime="05:30:00" vehicleRefId="veh_1_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15120_12738">
+			<description>shapeId:shape_15120_12738</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158887" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158888" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158879" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158880" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158881" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158882" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="158883" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:28:00" departureOffset="00:28:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158884" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="158885" arrivalOffset="00:38:00" departureOffset="00:38:00" awaitDeparture="true"/>
+				<stop refId="158886" arrivalOffset="00:40:00" departureOffset="00:40:00" awaitDeparture="true"/>
+				<stop refId="158889" arrivalOffset="00:43:00" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="158887" arrivalOffset="00:45:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15120_12738_05:30:00" departureTime="05:30:00" vehicleRefId="veh_2_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15121_12740">
+			<description>shapeId:shape_15121_12740</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158894" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158895" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158896" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158897" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158898" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158899" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="158900" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158901" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158902" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158903" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158904" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158905" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158887" arrivalOffset="00:30:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15121_12740_05:30:00" departureTime="05:30:00" vehicleRefId="veh_3_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15121_12739">
+			<description>shapeId:shape_15121_12739</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158887" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158888" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158890" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158891" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158892" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158893" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158894" arrivalOffset="00:23:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15121_12739_05:30:00" departureTime="05:30:00" vehicleRefId="veh_4_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15122" name="А3а">
+		<transitRoute id="15122_12741">
+			<description>shapeId:shape_15122_12741</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158887" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158906" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158892" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:29:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15122_12741_05:30:00" departureTime="05:30:00" vehicleRefId="veh_5_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15122_12742">
+			<description>shapeId:shape_15122_12742</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158865" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158871" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158872" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158907" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158889" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158887" arrivalOffset="00:21:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15122_12742_05:30:00" departureTime="05:30:00" vehicleRefId="veh_6_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15123" name="А329">
+		<transitRoute id="15123_12743">
+			<description>shapeId:shape_15123_12743</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158908" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158900" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="158909" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158910" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158911" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="158912" arrivalOffset="01:01:00" departureOffset="01:01:00" awaitDeparture="true"/>
+				<stop refId="158913" arrivalOffset="01:15:00" departureOffset="01:15:00" awaitDeparture="true"/>
+				<stop refId="158914" arrivalOffset="01:20:00" departureOffset="01:20:00" awaitDeparture="true"/>
+				<stop refId="158915" arrivalOffset="01:35:00" departureOffset="01:35:00" awaitDeparture="true"/>
+				<stop refId="158916" arrivalOffset="01:40:00" departureOffset="01:40:00" awaitDeparture="true"/>
+				<stop refId="158917" arrivalOffset="01:57:00" departureOffset="01:57:00" awaitDeparture="true"/>
+				<stop refId="158918" arrivalOffset="02:00:00" departureOffset="02:00:00" awaitDeparture="true"/>
+				<stop refId="158919" arrivalOffset="02:11:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15123_12743_05:30:00" departureTime="05:30:00" vehicleRefId="veh_7_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15123_12744">
+			<description>shapeId:shape_15123_12744</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158919" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158920" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158921" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158922" arrivalOffset="00:31:00" departureOffset="00:31:00" awaitDeparture="true"/>
+				<stop refId="158923" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158924" arrivalOffset="00:51:00" departureOffset="00:51:00" awaitDeparture="true"/>
+				<stop refId="158925" arrivalOffset="00:58:00" departureOffset="00:58:00" awaitDeparture="true"/>
+				<stop refId="158926" arrivalOffset="01:11:00" departureOffset="01:11:00" awaitDeparture="true"/>
+				<stop refId="158927" arrivalOffset="01:33:00" departureOffset="01:33:00" awaitDeparture="true"/>
+				<stop refId="158928" arrivalOffset="01:41:00" departureOffset="01:41:00" awaitDeparture="true"/>
+				<stop refId="158929" arrivalOffset="01:55:00" departureOffset="01:55:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="02:08:00" departureOffset="02:08:00" awaitDeparture="true"/>
+				<stop refId="158930" arrivalOffset="02:09:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15123_12744_05:30:00" departureTime="05:30:00" vehicleRefId="veh_8_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15124" name="А3">
+		<transitRoute id="15124_12746">
+			<description>shapeId:shape_15124_12746</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158865" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158871" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158872" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158907" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158889" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158887" arrivalOffset="00:21:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15124_12746_05:30:00" departureTime="05:30:00" vehicleRefId="veh_9_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15124_12745">
+			<description>shapeId:shape_15124_12745</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158887" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158906" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158892" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:29:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15124_12745_05:30:00" departureTime="05:30:00" vehicleRefId="veh_10_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15125" name="А6">
+		<transitRoute id="15125_12747">
+			<description>shapeId:shape_15125_12747</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158892" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158884" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158885" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="158886" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="158889" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158887" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158906" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:37:00" departureOffset="00:37:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:40:00" departureOffset="00:40:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:45:00" departureOffset="00:45:00" awaitDeparture="true"/>
+				<stop refId="158892" arrivalOffset="00:47:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15125_12747_05:30:00" departureTime="05:30:00" vehicleRefId="veh_11_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15126" name="А4">
+		<transitRoute id="15126_12749">
+			<description>shapeId:shape_15126_12749</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158947" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158861" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158937" arrivalOffset="00:28:00" departureOffset="00:28:00" awaitDeparture="true"/>
+				<stop refId="158938" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="158879" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158880" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:37:00" departureOffset="00:37:00" awaitDeparture="true"/>
+				<stop refId="158939" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="158883" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="158940" arrivalOffset="00:45:00" departureOffset="00:45:00" awaitDeparture="true"/>
+				<stop refId="158941" arrivalOffset="00:47:00" departureOffset="00:47:00" awaitDeparture="true"/>
+				<stop refId="158942" arrivalOffset="00:48:00" departureOffset="00:48:00" awaitDeparture="true"/>
+				<stop refId="158943" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="158944" arrivalOffset="00:51:00" departureOffset="00:51:00" awaitDeparture="true"/>
+				<stop refId="158945" arrivalOffset="00:52:00" departureOffset="00:52:00" awaitDeparture="true"/>
+				<stop refId="158946" arrivalOffset="00:53:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15126_12749_05:30:00" departureTime="05:30:00" vehicleRefId="veh_12_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15126_12748">
+			<description>shapeId:shape_15126_12748</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158929" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158931" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="158932" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158933" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158934" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="158935" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158936" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158861" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158937" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158938" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158879" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158880" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="158939" arrivalOffset="00:43:00" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="158883" arrivalOffset="00:45:00" departureOffset="00:45:00" awaitDeparture="true"/>
+				<stop refId="158940" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="158941" arrivalOffset="00:51:00" departureOffset="00:51:00" awaitDeparture="true"/>
+				<stop refId="158942" arrivalOffset="00:52:00" departureOffset="00:52:00" awaitDeparture="true"/>
+				<stop refId="158943" arrivalOffset="00:53:00" departureOffset="00:53:00" awaitDeparture="true"/>
+				<stop refId="158944" arrivalOffset="00:55:00" departureOffset="00:55:00" awaitDeparture="true"/>
+				<stop refId="158945" arrivalOffset="00:56:00" departureOffset="00:56:00" awaitDeparture="true"/>
+				<stop refId="158946" arrivalOffset="00:57:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15126_12748_05:30:00" departureTime="05:30:00" vehicleRefId="veh_13_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15127" name="А10">
+		<transitRoute id="15127_12753">
+			<description>shapeId:shape_15127_12753</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158868" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="158939" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158883" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158954" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158955" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158956" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158957" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158958" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158959" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158877" arrivalOffset="00:28:00" departureOffset="00:28:00" awaitDeparture="true"/>
+				<stop refId="158878" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="158847" arrivalOffset="00:33:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15127_12753_05:30:00" departureTime="05:30:00" vehicleRefId="veh_14_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15127_12752">
+			<description>shapeId:shape_15127_12752</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158954" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158955" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158956" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="158957" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158958" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="158959" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158877" arrivalOffset="00:15:00" departureOffset="00:15:00" awaitDeparture="true"/>
+				<stop refId="158878" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158847" arrivalOffset="00:20:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15127_12752_05:30:00" departureTime="05:30:00" vehicleRefId="veh_15_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15127_12751">
+			<description>shapeId:shape_15127_12751</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158847" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158848" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158849" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158948" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158949" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="158950" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158951" arrivalOffset="00:15:00" departureOffset="00:15:00" awaitDeparture="true"/>
+				<stop refId="158952" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158953" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158861" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:38:00" departureOffset="00:38:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:39:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15127_12751_05:30:00" departureTime="05:30:00" vehicleRefId="veh_16_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15127_12750">
+			<description>shapeId:shape_15127_12750</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158847" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158848" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158849" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158948" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158949" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="158950" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158951" arrivalOffset="00:15:00" departureOffset="00:15:00" awaitDeparture="true"/>
+				<stop refId="158952" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158953" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158861" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:38:00" departureOffset="00:38:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:43:00" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:47:00" departureOffset="00:47:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="158939" arrivalOffset="00:50:00" departureOffset="00:50:00" awaitDeparture="true"/>
+				<stop refId="158883" arrivalOffset="00:52:00" departureOffset="00:52:00" awaitDeparture="true"/>
+				<stop refId="158954" arrivalOffset="00:56:00" departureOffset="00:56:00" awaitDeparture="true"/>
+				<stop refId="158955" arrivalOffset="01:00:00" departureOffset="01:00:00" awaitDeparture="true"/>
+				<stop refId="158956" arrivalOffset="01:02:00" departureOffset="01:02:00" awaitDeparture="true"/>
+				<stop refId="158957" arrivalOffset="01:04:00" departureOffset="01:04:00" awaitDeparture="true"/>
+				<stop refId="158958" arrivalOffset="01:06:00" departureOffset="01:06:00" awaitDeparture="true"/>
+				<stop refId="158959" arrivalOffset="01:09:00" departureOffset="01:09:00" awaitDeparture="true"/>
+				<stop refId="158877" arrivalOffset="01:11:00" departureOffset="01:11:00" awaitDeparture="true"/>
+				<stop refId="158878" arrivalOffset="01:13:00" departureOffset="01:13:00" awaitDeparture="true"/>
+				<stop refId="158847" arrivalOffset="01:16:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15127_12750_05:30:00" departureTime="05:30:00" vehicleRefId="veh_17_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15128" name="А405">
+		<transitRoute id="15128_12755">
+			<description>shapeId:shape_15128_12755</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158969" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158970" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158971" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158972" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="158973" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158974" arrivalOffset="00:33:00" departureOffset="00:33:00" awaitDeparture="true"/>
+				<stop refId="158975" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158976" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="158977" arrivalOffset="00:42:00" departureOffset="00:42:00" awaitDeparture="true"/>
+				<stop refId="158960" arrivalOffset="00:44:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15128_12755_05:30:00" departureTime="05:30:00" vehicleRefId="veh_18_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15128_12754">
+			<description>shapeId:shape_15128_12754</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158960" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158961" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158962" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158963" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158964" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158965" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158966" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="158967" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158968" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:45:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15128_12754_05:30:00" departureTime="05:30:00" vehicleRefId="veh_19_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15129" name="А2б">
+		<transitRoute id="15129_12756">
+			<description>shapeId:shape_15129_12756</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158896" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158897" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="158898" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158899" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158900" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="158901" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158902" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158978" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158979" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158907" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="158980" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="158981" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158982" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158892" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158893" arrivalOffset="00:37:00" departureOffset="00:37:00" awaitDeparture="true"/>
+				<stop refId="158895" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="158896" arrivalOffset="00:40:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15129_12756_05:30:00" departureTime="05:30:00" vehicleRefId="veh_20_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15130" name="А307">
+	</transitLine>
+	<transitLine id="15131" name="А420">
+		<transitRoute id="15131_12759">
+			<description>shapeId:shape_15131_12759</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158969" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159019" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="159020" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="159021" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="159022" arrivalOffset="00:33:00" departureOffset="00:33:00" awaitDeparture="true"/>
+				<stop refId="159023" arrivalOffset="00:43:00" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="159024" arrivalOffset="00:55:00" departureOffset="00:55:00" awaitDeparture="true"/>
+				<stop refId="159025" arrivalOffset="01:00:00" departureOffset="01:00:00" awaitDeparture="true"/>
+				<stop refId="159026" arrivalOffset="01:03:00" departureOffset="01:03:00" awaitDeparture="true"/>
+				<stop refId="159027" arrivalOffset="01:06:00" departureOffset="01:06:00" awaitDeparture="true"/>
+				<stop refId="159028" arrivalOffset="01:25:00" departureOffset="01:25:00" awaitDeparture="true"/>
+				<stop refId="159029" arrivalOffset="01:35:00" departureOffset="01:35:00" awaitDeparture="true"/>
+				<stop refId="159030" arrivalOffset="01:53:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15131_12759_05:30:00" departureTime="05:30:00" vehicleRefId="veh_21_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15130_12757">
+			<description>shapeId:shape_15130_12757</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158908" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158900" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="158983" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158984" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158985" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="158986" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158987" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158988" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158989" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="158990" arrivalOffset="00:52:00" departureOffset="00:52:00" awaitDeparture="true"/>
+				<stop refId="158991" arrivalOffset="00:57:00" departureOffset="00:57:00" awaitDeparture="true"/>
+				<stop refId="158992" arrivalOffset="01:07:00" departureOffset="01:07:00" awaitDeparture="true"/>
+				<stop refId="158993" arrivalOffset="01:16:00" departureOffset="01:16:00" awaitDeparture="true"/>
+				<stop refId="158994" arrivalOffset="01:28:00" departureOffset="01:28:00" awaitDeparture="true"/>
+				<stop refId="158995" arrivalOffset="01:41:00" departureOffset="01:41:00" awaitDeparture="true"/>
+				<stop refId="158996" arrivalOffset="01:46:00" departureOffset="01:46:00" awaitDeparture="true"/>
+				<stop refId="158997" arrivalOffset="01:58:00" departureOffset="01:58:00" awaitDeparture="true"/>
+				<stop refId="158998" arrivalOffset="02:04:00" departureOffset="02:04:00" awaitDeparture="true"/>
+				<stop refId="158999" arrivalOffset="02:20:00" departureOffset="02:20:00" awaitDeparture="true"/>
+				<stop refId="159000" arrivalOffset="02:32:00" departureOffset="02:32:00" awaitDeparture="true"/>
+				<stop refId="159001" arrivalOffset="02:39:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15130_12757_05:30:00" departureTime="05:30:00" vehicleRefId="veh_22_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15130_12758">
+			<description>shapeId:shape_15130_12758</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159001" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159002" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="159003" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="159004" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="159005" arrivalOffset="00:42:00" departureOffset="00:42:00" awaitDeparture="true"/>
+				<stop refId="159006" arrivalOffset="00:54:00" departureOffset="00:54:00" awaitDeparture="true"/>
+				<stop refId="159007" arrivalOffset="00:59:00" departureOffset="00:59:00" awaitDeparture="true"/>
+				<stop refId="159008" arrivalOffset="01:12:00" departureOffset="01:12:00" awaitDeparture="true"/>
+				<stop refId="159009" arrivalOffset="01:24:00" departureOffset="01:24:00" awaitDeparture="true"/>
+				<stop refId="159010" arrivalOffset="01:33:00" departureOffset="01:33:00" awaitDeparture="true"/>
+				<stop refId="159011" arrivalOffset="01:42:00" departureOffset="01:42:00" awaitDeparture="true"/>
+				<stop refId="159012" arrivalOffset="01:48:00" departureOffset="01:48:00" awaitDeparture="true"/>
+				<stop refId="159013" arrivalOffset="01:51:00" departureOffset="01:51:00" awaitDeparture="true"/>
+				<stop refId="159014" arrivalOffset="02:06:00" departureOffset="02:06:00" awaitDeparture="true"/>
+				<stop refId="159015" arrivalOffset="02:12:00" departureOffset="02:12:00" awaitDeparture="true"/>
+				<stop refId="159016" arrivalOffset="02:22:00" departureOffset="02:22:00" awaitDeparture="true"/>
+				<stop refId="159017" arrivalOffset="02:29:00" departureOffset="02:29:00" awaitDeparture="true"/>
+				<stop refId="159018" arrivalOffset="02:32:00" departureOffset="02:32:00" awaitDeparture="true"/>
+				<stop refId="158861" arrivalOffset="02:38:00" departureOffset="02:38:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="02:40:00" departureOffset="02:40:00" awaitDeparture="true"/>
+				<stop refId="158930" arrivalOffset="02:41:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15130_12758_05:30:00" departureTime="05:30:00" vehicleRefId="veh_23_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15131_12762">
+			<description>shapeId:shape_15131_12762</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159031" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159032" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="159033" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="159034" arrivalOffset="00:33:00" departureOffset="00:33:00" awaitDeparture="true"/>
+				<stop refId="159035" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="159036" arrivalOffset="00:42:00" departureOffset="00:42:00" awaitDeparture="true"/>
+				<stop refId="159037" arrivalOffset="00:55:00" departureOffset="00:55:00" awaitDeparture="true"/>
+				<stop refId="159038" arrivalOffset="01:05:00" departureOffset="01:05:00" awaitDeparture="true"/>
+				<stop refId="159039" arrivalOffset="01:14:00" departureOffset="01:14:00" awaitDeparture="true"/>
+				<stop refId="159040" arrivalOffset="01:19:00" departureOffset="01:19:00" awaitDeparture="true"/>
+				<stop refId="159041" arrivalOffset="01:28:00" departureOffset="01:28:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="01:37:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15131_12762_05:30:00" departureTime="05:30:00" vehicleRefId="veh_24_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15131_12761">
+			<description>shapeId:shape_15131_12761</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158969" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159019" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="159020" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="159021" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="159022" arrivalOffset="00:33:00" departureOffset="00:33:00" awaitDeparture="true"/>
+				<stop refId="159023" arrivalOffset="00:43:00" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="159024" arrivalOffset="00:55:00" departureOffset="00:55:00" awaitDeparture="true"/>
+				<stop refId="159025" arrivalOffset="01:00:00" departureOffset="01:00:00" awaitDeparture="true"/>
+				<stop refId="159026" arrivalOffset="01:03:00" departureOffset="01:03:00" awaitDeparture="true"/>
+				<stop refId="159027" arrivalOffset="01:06:00" departureOffset="01:06:00" awaitDeparture="true"/>
+				<stop refId="159028" arrivalOffset="01:25:00" departureOffset="01:25:00" awaitDeparture="true"/>
+				<stop refId="159029" arrivalOffset="01:35:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15131_12761_05:30:00" departureTime="05:30:00" vehicleRefId="veh_25_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15131_12760">
+			<description>shapeId:shape_15131_12760</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159030" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159031" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="159032" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="159033" arrivalOffset="00:48:00" departureOffset="00:48:00" awaitDeparture="true"/>
+				<stop refId="159034" arrivalOffset="00:51:00" departureOffset="00:51:00" awaitDeparture="true"/>
+				<stop refId="159035" arrivalOffset="00:54:00" departureOffset="00:54:00" awaitDeparture="true"/>
+				<stop refId="159036" arrivalOffset="01:00:00" departureOffset="01:00:00" awaitDeparture="true"/>
+				<stop refId="159037" arrivalOffset="01:13:00" departureOffset="01:13:00" awaitDeparture="true"/>
+				<stop refId="159038" arrivalOffset="01:23:00" departureOffset="01:23:00" awaitDeparture="true"/>
+				<stop refId="159039" arrivalOffset="01:32:00" departureOffset="01:32:00" awaitDeparture="true"/>
+				<stop refId="159040" arrivalOffset="01:37:00" departureOffset="01:37:00" awaitDeparture="true"/>
+				<stop refId="159041" arrivalOffset="01:46:00" departureOffset="01:46:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="01:55:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15131_12760_05:30:00" departureTime="05:30:00" vehicleRefId="veh_26_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15132" name="А15">
+		<transitRoute id="15132_12764">
+			<description>shapeId:shape_15132_12764</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159043" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158855" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="159044" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="159045" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158894" arrivalOffset="00:29:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15132_12764_05:30:00" departureTime="05:30:00" vehicleRefId="veh_27_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15132_12763">
+			<description>shapeId:shape_15132_12763</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158894" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158895" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158896" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="158897" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158898" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="159042" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:15:00" departureOffset="00:15:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158871" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158872" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158873" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158874" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="159043" arrivalOffset="00:27:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15132_12763_05:30:00" departureTime="05:30:00" vehicleRefId="veh_28_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15133" name="А403">
+		<transitRoute id="15133_12766">
+			<description>shapeId:shape_15133_12766</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158860" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158969" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158970" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158971" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158972" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="158973" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158974" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="159052" arrivalOffset="00:38:00" departureOffset="00:38:00" awaitDeparture="true"/>
+				<stop refId="159053" arrivalOffset="00:46:00" departureOffset="00:46:00" awaitDeparture="true"/>
+				<stop refId="159054" arrivalOffset="00:50:00" departureOffset="00:50:00" awaitDeparture="true"/>
+				<stop refId="159055" arrivalOffset="00:54:00" departureOffset="00:54:00" awaitDeparture="true"/>
+				<stop refId="159056" arrivalOffset="00:59:00" departureOffset="00:59:00" awaitDeparture="true"/>
+				<stop refId="159046" arrivalOffset="01:05:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15133_12766_05:30:00" departureTime="05:30:00" vehicleRefId="veh_29_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15133_12765">
+			<description>shapeId:shape_15133_12765</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159046" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159047" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="159048" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="159049" arrivalOffset="00:15:00" departureOffset="00:15:00" awaitDeparture="true"/>
+				<stop refId="159050" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="159051" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158964" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="158965" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158966" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="158967" arrivalOffset="00:46:00" departureOffset="00:46:00" awaitDeparture="true"/>
+				<stop refId="158968" arrivalOffset="00:55:00" departureOffset="00:55:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="01:04:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15133_12765_05:30:00" departureTime="05:30:00" vehicleRefId="veh_30_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15134" name="А1">
+		<transitRoute id="15134_12769">
+			<description>shapeId:shape_15134_12769</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159057" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159058" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="159059" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="159060" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="159061" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158898" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="159042" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158871" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158872" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158873" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158874" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158875" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="159062" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="159063" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="159064" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="159065" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="159074" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="159075" arrivalOffset="00:41:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15134_12769_05:30:00" departureTime="05:30:00" vehicleRefId="veh_31_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15134_12770">
+			<description>shapeId:shape_15134_12770</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159075" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159076" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="159066" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="159067" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="159068" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="159069" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="158854" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158855" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:19:00" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="159044" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="159045" arrivalOffset="00:31:00" departureOffset="00:31:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:33:00" departureOffset="00:33:00" awaitDeparture="true"/>
+				<stop refId="159070" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="159071" arrivalOffset="00:37:00" departureOffset="00:37:00" awaitDeparture="true"/>
+				<stop refId="159072" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="159073" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="159057" arrivalOffset="00:43:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15134_12770_05:30:00" departureTime="05:30:00" vehicleRefId="veh_32_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15134_12771">
+			<description>shapeId:shape_15134_12771</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159066" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159067" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="159068" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="159069" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158854" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="158855" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="159044" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="159045" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:28:00" departureOffset="00:28:00" awaitDeparture="true"/>
+				<stop refId="159070" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="159071" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="159072" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="159073" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="159057" arrivalOffset="00:38:00" departureOffset="00:38:00" awaitDeparture="true"/>
+				<stop refId="159077" arrivalOffset="00:44:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15134_12771_05:30:00" departureTime="05:30:00" vehicleRefId="veh_33_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15134_12772">
+			<description>shapeId:shape_15134_12772</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159077" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159078" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="159058" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="159059" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="159060" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="159061" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158898" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="159042" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158871" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158872" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158873" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158874" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="158875" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="159062" arrivalOffset="00:38:00" departureOffset="00:38:00" awaitDeparture="true"/>
+				<stop refId="159063" arrivalOffset="00:40:00" departureOffset="00:40:00" awaitDeparture="true"/>
+				<stop refId="159064" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="159065" arrivalOffset="00:42:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15134_12772_05:30:00" departureTime="05:30:00" vehicleRefId="veh_34_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15134_12767">
+			<description>shapeId:shape_15134_12767</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159057" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159058" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="159059" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="159060" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="159061" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158898" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="159042" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158869" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="158870" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158871" arrivalOffset="00:21:00" departureOffset="00:21:00" awaitDeparture="true"/>
+				<stop refId="158872" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158873" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158874" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158875" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="159062" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="159063" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="159064" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="159065" arrivalOffset="00:36:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15134_12767_05:30:00" departureTime="05:30:00" vehicleRefId="veh_35_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15134_12768">
+			<description>shapeId:shape_15134_12768</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159066" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159067" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="159068" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="159069" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158854" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="158855" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158856" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158857" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158859" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="00:22:00" departureOffset="00:22:00" awaitDeparture="true"/>
+				<stop refId="159044" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="159045" arrivalOffset="00:26:00" departureOffset="00:26:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:28:00" departureOffset="00:28:00" awaitDeparture="true"/>
+				<stop refId="159070" arrivalOffset="00:30:00" departureOffset="00:30:00" awaitDeparture="true"/>
+				<stop refId="159071" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="159072" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="159073" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="159057" arrivalOffset="00:38:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15134_12768_05:30:00" departureTime="05:30:00" vehicleRefId="veh_36_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15135" name="А7">
+		<transitRoute id="15135_12773">
+			<description>shapeId:shape_15135_12773</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158929" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158931" arrivalOffset="00:01:00" departureOffset="00:01:00" awaitDeparture="true"/>
+				<stop refId="158932" arrivalOffset="00:02:00" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="158933" arrivalOffset="00:04:00" departureOffset="00:04:00" awaitDeparture="true"/>
+				<stop refId="158934" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="158935" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="158936" arrivalOffset="00:08:00" departureOffset="00:08:00" awaitDeparture="true"/>
+				<stop refId="158861" arrivalOffset="00:11:00" departureOffset="00:11:00" awaitDeparture="true"/>
+				<stop refId="158862" arrivalOffset="00:13:00" departureOffset="00:13:00" awaitDeparture="true"/>
+				<stop refId="158863" arrivalOffset="00:16:00" departureOffset="00:16:00" awaitDeparture="true"/>
+				<stop refId="158864" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="158865" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="158866" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="158867" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158868" arrivalOffset="00:29:00" departureOffset="00:29:00" awaitDeparture="true"/>
+				<stop refId="158937" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158938" arrivalOffset="00:34:00" departureOffset="00:34:00" awaitDeparture="true"/>
+				<stop refId="158879" arrivalOffset="00:36:00" departureOffset="00:36:00" awaitDeparture="true"/>
+				<stop refId="158880" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="158858" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="158939" arrivalOffset="00:43:00" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="158883" arrivalOffset="00:45:00" departureOffset="00:45:00" awaitDeparture="true"/>
+				<stop refId="159079" arrivalOffset="00:50:00" departureOffset="00:50:00" awaitDeparture="true"/>
+				<stop refId="159080" arrivalOffset="00:52:00" departureOffset="00:52:00" awaitDeparture="true"/>
+				<stop refId="159081" arrivalOffset="00:54:00" departureOffset="00:54:00" awaitDeparture="true"/>
+				<stop refId="159082" arrivalOffset="00:57:00" departureOffset="00:57:00" awaitDeparture="true"/>
+				<stop refId="159083" arrivalOffset="00:59:00" departureOffset="00:59:00" awaitDeparture="true"/>
+				<stop refId="158909" arrivalOffset="01:01:00" departureOffset="01:01:00" awaitDeparture="true"/>
+				<stop refId="158929" arrivalOffset="01:04:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15135_12773_05:30:00" departureTime="05:30:00" vehicleRefId="veh_37_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15136" name="А316">
+		<transitRoute id="15136_12774">
+			<description>shapeId:shape_15136_12774</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158908" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="158969" arrivalOffset="00:05:00" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="158970" arrivalOffset="00:14:00" departureOffset="00:14:00" awaitDeparture="true"/>
+				<stop refId="158971" arrivalOffset="00:23:00" departureOffset="00:23:00" awaitDeparture="true"/>
+				<stop refId="158972" arrivalOffset="00:27:00" departureOffset="00:27:00" awaitDeparture="true"/>
+				<stop refId="158973" arrivalOffset="00:32:00" departureOffset="00:32:00" awaitDeparture="true"/>
+				<stop refId="158974" arrivalOffset="00:38:00" departureOffset="00:38:00" awaitDeparture="true"/>
+				<stop refId="158975" arrivalOffset="00:41:00" departureOffset="00:41:00" awaitDeparture="true"/>
+				<stop refId="158976" arrivalOffset="00:46:00" departureOffset="00:46:00" awaitDeparture="true"/>
+				<stop refId="158977" arrivalOffset="00:47:00" departureOffset="00:47:00" awaitDeparture="true"/>
+				<stop refId="159084" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="159085" arrivalOffset="00:59:00" departureOffset="00:59:00" awaitDeparture="true"/>
+				<stop refId="159086" arrivalOffset="01:12:00" departureOffset="01:12:00" awaitDeparture="true"/>
+				<stop refId="159087" arrivalOffset="01:21:00" departureOffset="01:21:00" awaitDeparture="true"/>
+				<stop refId="159088" arrivalOffset="01:30:00" departureOffset="01:30:00" awaitDeparture="true"/>
+				<stop refId="159089" arrivalOffset="01:36:00" departureOffset="01:36:00" awaitDeparture="true"/>
+				<stop refId="159090" arrivalOffset="01:44:00" departureOffset="01:44:00" awaitDeparture="true"/>
+				<stop refId="159091" arrivalOffset="01:54:00" departureOffset="01:54:00" awaitDeparture="true"/>
+				<stop refId="159092" arrivalOffset="02:13:00" departureOffset="02:13:00" awaitDeparture="true"/>
+				<stop refId="159093" arrivalOffset="02:15:00" departureOffset="02:15:00" awaitDeparture="true"/>
+				<stop refId="159094" arrivalOffset="02:22:00" departureOffset="02:22:00" awaitDeparture="true"/>
+				<stop refId="159095" arrivalOffset="02:25:00" departureOffset="02:25:00" awaitDeparture="true"/>
+				<stop refId="159096" arrivalOffset="02:32:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15136_12774_05:30:00" departureTime="05:30:00" vehicleRefId="veh_38_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15136_12775">
+			<description>shapeId:shape_15136_12775</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159096" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159097" arrivalOffset="00:07:00" departureOffset="00:07:00" awaitDeparture="true"/>
+				<stop refId="159098" arrivalOffset="00:10:00" departureOffset="00:10:00" awaitDeparture="true"/>
+				<stop refId="159099" arrivalOffset="00:17:00" departureOffset="00:17:00" awaitDeparture="true"/>
+				<stop refId="159100" arrivalOffset="00:20:00" departureOffset="00:20:00" awaitDeparture="true"/>
+				<stop refId="159101" arrivalOffset="00:39:00" departureOffset="00:39:00" awaitDeparture="true"/>
+				<stop refId="159102" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="159103" arrivalOffset="00:57:00" departureOffset="00:57:00" awaitDeparture="true"/>
+				<stop refId="159104" arrivalOffset="01:02:00" departureOffset="01:02:00" awaitDeparture="true"/>
+				<stop refId="159105" arrivalOffset="01:12:00" departureOffset="01:12:00" awaitDeparture="true"/>
+				<stop refId="159106" arrivalOffset="01:20:00" departureOffset="01:20:00" awaitDeparture="true"/>
+				<stop refId="159107" arrivalOffset="01:33:00" departureOffset="01:33:00" awaitDeparture="true"/>
+				<stop refId="158960" arrivalOffset="01:43:00" departureOffset="01:43:00" awaitDeparture="true"/>
+				<stop refId="158961" arrivalOffset="01:45:00" departureOffset="01:45:00" awaitDeparture="true"/>
+				<stop refId="158962" arrivalOffset="01:46:00" departureOffset="01:46:00" awaitDeparture="true"/>
+				<stop refId="158963" arrivalOffset="01:51:00" departureOffset="01:51:00" awaitDeparture="true"/>
+				<stop refId="158964" arrivalOffset="01:54:00" departureOffset="01:54:00" awaitDeparture="true"/>
+				<stop refId="158965" arrivalOffset="02:00:00" departureOffset="02:00:00" awaitDeparture="true"/>
+				<stop refId="158966" arrivalOffset="02:05:00" departureOffset="02:05:00" awaitDeparture="true"/>
+				<stop refId="158967" arrivalOffset="02:10:00" departureOffset="02:10:00" awaitDeparture="true"/>
+				<stop refId="158968" arrivalOffset="02:19:00" departureOffset="02:19:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="02:28:00" departureOffset="02:28:00" awaitDeparture="true"/>
+				<stop refId="158900" arrivalOffset="02:32:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15136_12775_05:30:00" departureTime="05:30:00" vehicleRefId="veh_39_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="15137" name="А406">
+		<transitRoute id="15137_12777">
+			<description>shapeId:shape_15137_12777</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="158969" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159019" arrivalOffset="00:09:00" departureOffset="00:09:00" awaitDeparture="true"/>
+				<stop refId="159020" arrivalOffset="00:18:00" departureOffset="00:18:00" awaitDeparture="true"/>
+				<stop refId="159021" arrivalOffset="00:24:00" departureOffset="00:24:00" awaitDeparture="true"/>
+				<stop refId="159022" arrivalOffset="00:33:00" departureOffset="00:33:00" awaitDeparture="true"/>
+				<stop refId="159023" arrivalOffset="00:43:00" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="159024" arrivalOffset="00:55:00" departureOffset="00:55:00" awaitDeparture="true"/>
+				<stop refId="159025" arrivalOffset="01:00:00" departureOffset="01:00:00" awaitDeparture="true"/>
+				<stop refId="159026" arrivalOffset="01:03:00" departureOffset="01:03:00" awaitDeparture="true"/>
+				<stop refId="159033" arrivalOffset="01:06:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15137_12777_05:30:00" departureTime="05:30:00" vehicleRefId="veh_40_pt"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="15137_12776">
+			<description>shapeId:shape_15137_12776</description>
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="159033" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="159034" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="159035" arrivalOffset="00:06:00" departureOffset="00:06:00" awaitDeparture="true"/>
+				<stop refId="159036" arrivalOffset="00:12:00" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="159037" arrivalOffset="00:25:00" departureOffset="00:25:00" awaitDeparture="true"/>
+				<stop refId="159038" arrivalOffset="00:35:00" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="159039" arrivalOffset="00:44:00" departureOffset="00:44:00" awaitDeparture="true"/>
+				<stop refId="159040" arrivalOffset="00:49:00" departureOffset="00:49:00" awaitDeparture="true"/>
+				<stop refId="159041" arrivalOffset="00:58:00" departureOffset="00:58:00" awaitDeparture="true"/>
+				<stop refId="158860" arrivalOffset="01:07:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<departures>
+				<departure id="15137_12776_05:30:00" departureTime="05:30:00" vehicleRefId="veh_41_pt"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+</transitSchedule>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE transitSchedule SYSTEM "http://www.matsim.org/files/dtd/transitSchedule_v1.dtd">
+
+<transitSchedule>
+	<transitStops>
+		<stopFacility id="1" x="0" y="0" linkRefId= "pt1"/>
+		<stopFacility id="2" x="50" y="50" linkRefId= "pt2"/>
+	</transitStops>
+	<transitLine id="dummy">
+		<transitRoute id="dummy">
+			<transportMode>pt</transportMode>
+			<routeProfile>
+				<stop refId="1" departureOffset="00:00:00"/>
+				<stop refId="2" arrivalOffset="00:05:00"/>
+			</routeProfile>
+			<route>
+				<link refId="pt1"/>
+				<link refId="pt2"/>
+			</route>
+			<departures>
+				<departure id="10001" departureTime="03:00:00" vehicleRefId="tr_0" />
+			</departures>
+		</transitRoute>
+	</transitLine>
+</transitSchedule>

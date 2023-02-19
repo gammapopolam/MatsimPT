@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehicleDefinitions xmlns="http://www.matsim.org/files/dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.matsim.org/files/dtd http://www.matsim.org/files/dtd/vehicleDefinitions_v2.0.xsd">
+
+	<vehicleType id="pt">
+		<attributes>
+			<attribute name="accessTimeInSecondsPerPerson" class="java.lang.Double">0.5</attribute>
+			<attribute name="doorOperationMode" class="org.matsim.vehicles.VehicleType$DoorOperationMode">serial</attribute>
+			<attribute name="egressTimeInSecondsPerPerson" class="java.lang.Double">0.5</attribute>
+		</attributes>
+		<capacity seats="70" standingRoomInPersons="0">
+
+		</capacity>
+		<length meter="18.0"/>
+		<width meter="2.5"/>
+		<costInformation>
+
+		</costInformation>
+		<passengerCarEquivalents pce="2.8"/>
+		<networkMode networkMode="pt"/>
+		<flowEfficiencyFactor factor="1.0"/>
+	</vehicleType>
+
+	<vehicle id="veh_0_pt" type="pt"/>
+	<vehicle id="veh_10_pt" type="pt"/>
+	<vehicle id="veh_11_pt" type="pt"/>
+	<vehicle id="veh_12_pt" type="pt"/>
+	<vehicle id="veh_13_pt" type="pt"/>
+	<vehicle id="veh_14_pt" type="pt"/>
+	<vehicle id="veh_15_pt" type="pt"/>
+	<vehicle id="veh_16_pt" type="pt"/>
+	<vehicle id="veh_17_pt" type="pt"/>
+	<vehicle id="veh_18_pt" type="pt"/>
+	<vehicle id="veh_19_pt" type="pt"/>
+	<vehicle id="veh_1_pt" type="pt"/>
+	<vehicle id="veh_20_pt" type="pt"/>
+	<vehicle id="veh_21_pt" type="pt"/>
+	<vehicle id="veh_22_pt" type="pt"/>
+	<vehicle id="veh_23_pt" type="pt"/>
+	<vehicle id="veh_24_pt" type="pt"/>
+	<vehicle id="veh_25_pt" type="pt"/>
+	<vehicle id="veh_26_pt" type="pt"/>
+	<vehicle id="veh_27_pt" type="pt"/>
+	<vehicle id="veh_28_pt" type="pt"/>
+	<vehicle id="veh_29_pt" type="pt"/>
+	<vehicle id="veh_2_pt" type="pt"/>
+	<vehicle id="veh_30_pt" type="pt"/>
+	<vehicle id="veh_31_pt" type="pt"/>
+	<vehicle id="veh_32_pt" type="pt"/>
+	<vehicle id="veh_33_pt" type="pt"/>
+	<vehicle id="veh_34_pt" type="pt"/>
+	<vehicle id="veh_35_pt" type="pt"/>
+	<vehicle id="veh_36_pt" type="pt"/>
+	<vehicle id="veh_37_pt" type="pt"/>
+	<vehicle id="veh_38_pt" type="pt"/>
+	<vehicle id="veh_39_pt" type="pt"/>
+	<vehicle id="veh_3_pt" type="pt"/>
+	<vehicle id="veh_40_pt" type="pt"/>
+	<vehicle id="veh_41_pt" type="pt"/>
+	<vehicle id="veh_4_pt" type="pt"/>
+	<vehicle id="veh_5_pt" type="pt"/>
+	<vehicle id="veh_6_pt" type="pt"/>
+	<vehicle id="veh_7_pt" type="pt"/>
+	<vehicle id="veh_8_pt" type="pt"/>
+	<vehicle id="veh_9_pt" type="pt"/>
+		
+
+</vehicleDefinitions>
