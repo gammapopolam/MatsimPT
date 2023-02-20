@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 import csv
 import ast
 import pandas as pd
-
+import copy
 def wkt_linestring_to_pointxy(wkt):
     coords=wkt[12:-1]
     xy1=coords.split(',')[0].split(' ')
@@ -28,52 +28,91 @@ def segments_into_line(wkt_links):
     for i in range(len(wkt_links)):
         wkt+=wkt_links[i][12:-1]+', '
     return wkt+(')')
-tree1=ET.parse(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_network.xml')
-root1=tree1.getroot()
-nodes_id=[]
-nodes_xy=[]
+def parse_net(net_xml):
+    tree1=ET.parse(net_xml)
+    root1=tree1.getroot()
+    nodes_id=[]
+    nodes_xy=[]
 
-for child in root1:
-    for child1 in child:
-        if child1.tag=='node':
-            if 'pt' not in child1.attrib['id']:
-                nodes_id.append(child1.attrib['id'])
-                nodes_xy.append([child1.attrib['x'], child1.attrib['y']])
-nodes=dict(zip(nodes_id, nodes_xy))
-
-links_id=[]
-links_xy=[]
-for child in root1:
-    for child1 in child:
-        if child1.tag=='link':
-            if 'pt' not in child1.attrib['id']:
-                links_id.append(child1.attrib['id'])
-                xy_rebuild=to_wkt_linestring([nodes[child1.attrib['from']], nodes[child1.attrib['to']]])
-                links_xy.append(xy_rebuild)
-links=dict(zip(links_id, links_xy))
-
-tree2=ET.parse(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_transitSchedule.xml')
-root2=tree2.getroot()
-# para_line={'id': None, 'description': None, 'links': []}
-para_lines=[]
-for child in root2:
-    if child.attrib!={} and 'para' in child.attrib['id']:
+    for child in root1:
         for child1 in child:
+            if child1.tag=='node':
+                if 'pt' not in child1.attrib['id']:
+                    nodes_id.append(child1.attrib['id'])
+                    nodes_xy.append([child1.attrib['x'], child1.attrib['y']])
+    nodes=dict(zip(nodes_id, nodes_xy))
+
+    links_id=[]
+    links_xy=[]
+    for child in root1:
+        for child1 in child:
+            if child1.tag=='link':
+                if 'pt' not in child1.attrib['id']:
+                    links_id.append(child1.attrib['id'])
+                    xy_rebuild=to_wkt_linestring([nodes[child1.attrib['from']], nodes[child1.attrib['to']]])
+                    links_xy.append(xy_rebuild)
+    links=dict(zip(links_id, links_xy))
+    return links
+
+def parse_sched(sched, network):
+    tree2=ET.parse(sched)
+    root2=tree2.getroot()
+    para_lines=[]
+    for child in root2:
+        if child.attrib!={} and 'para' in child.attrib['id']:
+            for child1 in child:
             # print(child1.attrib)
-            para_line={'id': child1.attrib['id'], 'description': None, 'links': [], 'geom': None}
-            for child2 in child1:
-                # print(child2.text)
-                if 'Plan' in child2.text:
-                    para_line['description']=child2.text
-                for child3 in child2:
-                    if 'refId' in child3.attrib:
-                        if 'awaitDeparture' not in child3.attrib:
-                            # print(child3.attrib)
-                            para_line['links'].append(links[child3.attrib['refId']])
-            para_line['geom']=segments_into_line(para_line['links'])
-            para_lines.append(para_line)
-res=pd.DataFrame.from_dict(para_lines)
-res.to_csv(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_transitSchedule.csv')
-        
-    # for child1 in child:
-        # print(child1.attrib)
+                para_line={'id': child1.attrib['id'], 'description': None, 'links': [], 'geom': None}
+                for child2 in child1:
+                    # print(child2.text)
+                    if 'Plan' in child2.text:
+                        para_line['description']=child2.text
+                        for child3 in child2:
+                            if 'refId' in child3.attrib:
+                                if 'awaitDeparture' not in child3.attrib:
+                                    # print(child3.attrib)
+                                    para_line['links'].append(network[child3.attrib['refId']])
+                para_line['geom']=segments_into_line(para_line['links'])
+                para_lines.append(para_line)
+    return para_lines
+def parse_veh(veh): #null for occupancy
+    tree3=ET.parse(veh)
+    root3=tree3.getroot()
+    para_veh=[]
+    nulls=[]
+    for child in root3:
+        if 'type' in child.attrib.keys():
+            if 'para_' in child.attrib['id']:
+                line_id=child.attrib['id'][:-2]
+                veh_id=child.attrib['id']
+                para_veh.append(veh_id)
+                nulls.append(0)
+    return dict(zip(para_veh, nulls))
+def paratransit_vehs_state(vehs, veh, state):
+    if state:
+        vehs[veh]+=1
+    else:
+        vehs[veh]-=1
+    return vehs
+def parse_events(events, vehs): #occupancy in time
+    tree=ET.parse(events)
+    root=tree.getroot()
+    eventlist=[]
+    for child in root:
+        if child.attrib['type']=='PersonEntersVehicle' and 'person' in child.attrib['person']:
+            vehs=paratransit_vehs_state(vehs, child.attrib['vehicle'], True)
+            veh1=copy.deepcopy(vehs)
+            veh1['time']=child.attrib['time']
+            eventlist.append(veh1)
+        elif child.attrib['type']=='PersonLeavesVehicle' and 'person' in child.attrib['person']:
+            vehs=paratransit_vehs_state(vehs, child.attrib['vehicle'], False)
+            veh1=copy.deepcopy(vehs)
+            veh1['time']=child.attrib['time']
+            eventlist.append(veh1)
+    return eventlist
+network=parse_net(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_network.xml')
+paratransit_lines=parse_sched(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_transitSchedule.xml', network)
+paratransit_vehs=parse_veh(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_transitVehicles.xml')
+occupancy_t=parse_events(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_events.xml', paratransit_vehs)
+df_occupancy=pd.DataFrame.from_dict(occupancy_t)
+df_occupancy.to_csv(r'C:/Users/gamma/matsim/output/glazov_2/glazov_2.output_frequency.csv')
