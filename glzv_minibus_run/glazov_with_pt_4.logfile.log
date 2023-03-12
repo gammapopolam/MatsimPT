@@ -1,0 +1,245 @@
+2023-03-10T12:29:29,420  INFO Gbl:64 JVM: 19.0.1; Oracle Corporation; mixed mode, sharing; 64-bit
+2023-03-10T12:29:29,422  INFO Gbl:68 OS: Windows 11; 10.0; amd64
+2023-03-10T12:29:29,422  INFO Gbl:71 CPU cores: 4
+2023-03-10T12:29:29,424  INFO Gbl:72 max. Memory: 2008.0MB (2105540608B)
+2023-03-10T12:29:29,424  INFO Gbl:110 MATSim-Build: r${buildNumber} (${timestamp})
+2023-03-10T12:29:29,432  INFO MemoryObserver:42 used RAM: 45 MB  free: 19 MB  total: 65 MB
+2023-03-10T12:29:29,436  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.guice.DependencyGraphControlerListener
+2023-03-10T12:29:29,640  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.counts.CountsControlerListener
+2023-03-10T12:29:29,651  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.analysis.ModeStatsControlerListener
+2023-03-10T12:29:29,651  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.analysis.ScoreStatsControlerListener
+2023-03-10T12:29:29,659  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.contrib.minibus.stats.PStatsModule$1
+2023-03-10T12:29:29,667  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.contrib.minibus.stats.Line2GexfPStat
+2023-03-10T12:29:29,667  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPPaxHandler
+2023-03-10T12:29:29,670  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,675  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,675  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,682  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,683  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,684  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,684  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,688  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPPaxHandler
+2023-03-10T12:29:29,690  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,696  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,699  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,700  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,700  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,703  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,705  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,707  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPVehHandler
+2023-03-10T12:29:29,707  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,713  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,716  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,716  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPVehHandler
+2023-03-10T12:29:29,718  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,719  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,719  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,722  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.contrib.minibus.stats.GexfPStatLight
+2023-03-10T12:29:29,742  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPPaxHandler
+2023-03-10T12:29:29,742  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,742  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,749  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,749  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,750  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,750  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,750  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,752  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPPaxHandler
+2023-03-10T12:29:29,752  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,752  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,757  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,765  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,765  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,770  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,770  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,775  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPVehHandler
+2023-03-10T12:29:29,777  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,777  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,777  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,782  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPVehHandler
+2023-03-10T12:29:29,782  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,782  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,782  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,782  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.contrib.minibus.stats.GexfPStat
+2023-03-10T12:29:29,803  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPPaxHandler
+2023-03-10T12:29:29,803  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,804  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,805  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,806  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,807  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,808  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,809  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,810  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPPaxHandler
+2023-03-10T12:29:29,810  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,815  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,815  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,815  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,820  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,820  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,820  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,820  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPOperatorHandler
+2023-03-10T12:29:29,823  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,823  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,823  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:29,823  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:29,823  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,832  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPOperatorHandler
+2023-03-10T12:29:29,832  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,832  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,832  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:29,832  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:29,835  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,835  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPVehHandler
+2023-03-10T12:29:29,836  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,836  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,836  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,839  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.stats.CountPVehHandler
+2023-03-10T12:29:29,839  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,839  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,839  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,839  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.contrib.minibus.stats.operatorLogger.POperatorLogger
+2023-03-10T12:29:29,839  INFO POperatorLogger:80 enabled
+2023-03-10T12:29:29,848  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.contrib.minibus.stats.PStatsOverview
+2023-03-10T12:29:29,848  INFO PStatsOverview:146 enabled
+2023-03-10T12:29:29,857  INFO ControlerListenerManagerImpl:108 calling notifyStartup on org.matsim.contrib.minibus.hook.PControlerListener
+2023-03-10T12:29:29,865  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.hook.TimeProvider
+2023-03-10T12:29:29,865  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.ActivityStartEventHandler
+2023-03-10T12:29:29,865  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.ActivityStartEvent
+2023-03-10T12:29:29,865  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.ActivityEndEventHandler
+2023-03-10T12:29:29,869  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.ActivityEndEvent
+2023-03-10T12:29:29,869  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,869  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.hook.TimeProvider
+2023-03-10T12:29:29,870  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.ActivityStartEventHandler
+2023-03-10T12:29:29,870  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.ActivityStartEvent
+2023-03-10T12:29:29,872  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.ActivityEndEventHandler
+2023-03-10T12:29:29,872  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.ActivityEndEvent
+2023-03-10T12:29:29,873  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,881  INFO ReduceTimeServedRFare:74 enabled
+2023-03-10T12:29:29,890  INFO ReduceStopsToBeServedRFare:70 enabled
+2023-03-10T12:29:29,890  INFO PStrategyManager:61 enabled with 6 strategies
+2023-03-10T12:29:29,897  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.fare.StageContainerCreator
+2023-03-10T12:29:29,897  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:29,900  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:29,900  INFO EventsManagerImpl:144   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
+2023-03-10T12:29:29,900  INFO EventsManagerImpl:205     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
+2023-03-10T12:29:29,900  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,902  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,902  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,902  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,904  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,905  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,905  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,905  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.fare.StageContainerCreator
+2023-03-10T12:29:29,905  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:29,905  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:29,913  INFO EventsManagerImpl:144   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
+2023-03-10T12:29:29,913  INFO EventsManagerImpl:205     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
+2023-03-10T12:29:29,913  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,913  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,913  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler
+2023-03-10T12:29:29,917  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonEntersVehicleEvent
+2023-03-10T12:29:29,917  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,917  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,917  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,920  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.hook.OperatorCostCollectorHandler
+2023-03-10T12:29:29,920  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:29,922  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:29,922  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,922  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,924  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.VehicleAbortsEventHandler
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.VehicleAbortsEvent
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonMoneyEventHandler
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonMoneyEvent
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.hook.OperatorCostCollectorHandler
+2023-03-10T12:29:29,929  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:29,937  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:29,937  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2023-03-10T12:29:29,938  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.LinkEnterEvent
+2023-03-10T12:29:29,938  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler
+2023-03-10T12:29:29,940  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonLeavesVehicleEvent
+2023-03-10T12:29:29,940  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.VehicleAbortsEventHandler
+2023-03-10T12:29:29,940  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.VehicleAbortsEvent
+2023-03-10T12:29:29,940  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.PersonMoneyEventHandler
+2023-03-10T12:29:29,940  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.PersonMoneyEvent
+2023-03-10T12:29:29,945  INFO EventsManagerImpl:154 
+2023-03-10T12:29:29,961  WARN CreatePStops:119 There is more than one stop registered on link 990. 158862.link:990 stays registered as paratransit stop. Will ignore stop 158900.link:990
+2023-03-10T12:29:29,965  WARN CreatePStops:119 There is more than one stop registered on link 603. 158908.link:603 stays registered as paratransit stop. Will ignore stop 158930.link:603
+2023-03-10T12:29:29,965  WARN CreatePStops:119 There is more than one stop registered on link 1547. 158929.link:1547 stays registered as paratransit stop. Will ignore stop 158931.link:1547
+2023-03-10T12:29:29,977  WARN CreatePStops:119 There is more than one stop registered on link 1523. 158935.link:1523 stays registered as paratransit stop. Will ignore stop 158936.link:1523
+2023-03-10T12:29:29,978  WARN CreatePStops:119 There is more than one stop registered on link 1522. 158940.link:1522 stays registered as paratransit stop. Will ignore stop 158941.link:1522
+2023-03-10T12:29:29,981  WARN CreatePStops:119 There is more than one stop registered on link 1546. 158929.link:1546 stays registered as paratransit stop. Will ignore stop 158945.link:1546
+2023-03-10T12:29:29,981  WARN CreatePStops:119 There is more than one stop registered on link 30. 159064.link:30 stays registered as paratransit stop. Will ignore stop 159065.link:30
+2023-03-10T12:29:29,981  WARN CreatePStops:119 There is more than one stop registered on link 31. 159066.link:31 stays registered as paratransit stop. Will ignore stop 159067.link:31
+2023-03-10T12:29:29,985  WARN CreatePStops:119 There is more than one stop registered on link 170. 159057.link:170 stays registered as paratransit stop. Will ignore stop 159078.link:170
+2023-03-10T12:29:29,985  WARN CreatePStops:137 file  not found. Falling back to min/max serviceArea parameters.
+2023-03-10T12:29:30,009  INFO CreatePStops:272 Added 0 additional stops for paratransit services
+2023-03-10T12:29:30,025  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.routeProvider.TimeAwareComplexCircleScheduleProviderHandler
+2023-03-10T12:29:30,033  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:30,034  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:30,034  INFO EventsManagerImpl:144   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
+2023-03-10T12:29:30,034  INFO EventsManagerImpl:205     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
+2023-03-10T12:29:30,034  INFO EventsManagerImpl:154 
+2023-03-10T12:29:30,034  INFO EventsManagerImpl:138 adding Event-Handler: org.matsim.contrib.minibus.routeProvider.TimeAwareComplexCircleScheduleProviderHandler
+2023-03-10T12:29:30,034  INFO EventsManagerImpl:144   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2023-03-10T12:29:30,040  INFO EventsManagerImpl:205     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2023-03-10T12:29:30,041  INFO EventsManagerImpl:144   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
+2023-03-10T12:29:30,041  INFO EventsManagerImpl:205     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
+2023-03-10T12:29:30,041  INFO EventsManagerImpl:154 
+2023-03-10T12:29:30,050  INFO CreateOperatorFromTransitSchedule:97 Returning 0 operators created from transit schedule file null
+2023-03-10T12:29:30,122  INFO RandomStopProvider:125 Initialized with 0 of 0 stops covering 0.0 percent of activities
+2023-03-10T12:29:30,138  INFO RandomStopProvider:136 No weights found. Probably no population given. Falling back to old behavior.
+2023-03-10T12:29:30,138 ERROR MatsimRuntimeModifications:76 Getting uncaught Exception in Thread main
+java.lang.NullPointerException: Cannot invoke "org.matsim.pt.transitSchedule.api.TransitStopFacility.getId()" because "stop1" is null
+	at org.matsim.contrib.minibus.replanning.CreateNew24hPlan.run(CreateNew24hPlan.java:60) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.AbstractOperator.init(AbstractOperator.java:99) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.CarefulMultiPlanOperator.init(CarefulMultiPlanOperator.java:55) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.OperatorInitializer.createAdditionalOperators(OperatorInitializer.java:98) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.PBox.notifyStartup(PBox.java:132) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.PControlerListener.notifyStartup(PControlerListener.java:82) ~[classes/:?]
+	at org.matsim.core.controler.ControlerListenerManagerImpl.fireControlerStartupEvent(ControlerListenerManagerImpl.java:109) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:79) ~[classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) ~[classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:90) ~[classes/:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) ~[classes/:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:250) ~[classes/:?]
+	at org.matsim.contrib.minibus.RunMinibus.run(RunMinibus.java:59) ~[classes/:?]
+	at org.matsim.contrib.minibus.RunMinibus.main(RunMinibus.java:67) ~[classes/:?]
+2023-03-10T12:29:30,162  INFO MatsimRuntimeModifications:80 S H U T D O W N   ---   start shutdown.
+2023-03-10T12:29:30,162 ERROR MatsimRuntimeModifications:82 ERROR --- This is an unexpected shutdown!
+2023-03-10T12:29:30,162 ERROR MatsimRuntimeModifications:85 Shutdown possibly caused by the following Exception:
+java.lang.NullPointerException: Cannot invoke "org.matsim.pt.transitSchedule.api.TransitStopFacility.getId()" because "stop1" is null
+	at org.matsim.contrib.minibus.replanning.CreateNew24hPlan.run(CreateNew24hPlan.java:60) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.AbstractOperator.init(AbstractOperator.java:99) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.CarefulMultiPlanOperator.init(CarefulMultiPlanOperator.java:55) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.OperatorInitializer.createAdditionalOperators(OperatorInitializer.java:98) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.PBox.notifyStartup(PBox.java:132) ~[classes/:?]
+	at org.matsim.contrib.minibus.hook.PControlerListener.notifyStartup(PControlerListener.java:82) ~[classes/:?]
+	at org.matsim.core.controler.ControlerListenerManagerImpl.fireControlerStartupEvent(ControlerListenerManagerImpl.java:109) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:79) ~[classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) ~[classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:90) ~[classes/:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) ~[classes/:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:250) ~[classes/:?]
+	at org.matsim.contrib.minibus.RunMinibus.run(RunMinibus.java:59) ~[classes/:?]
+	at org.matsim.contrib.minibus.RunMinibus.main(RunMinibus.java:67) ~[classes/:?]
+2023-03-10T12:29:30,170  INFO ControlerListenerManagerImpl:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.EventsHandlingImpl
+2023-03-10T12:29:30,170  INFO ControlerListenerManagerImpl:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.DumpDataAtEndImpl
+2023-03-10T12:29:30,170  INFO ControlerListenerManagerImpl:127 calling notifyShutdown on org.matsim.analysis.ScoreStatsControlerListener
+2023-03-10T12:29:30,170  INFO ControlerListenerManagerImpl:127 calling notifyShutdown on org.matsim.analysis.IterationTravelStatsControlerListener
+2023-03-10T12:29:30,176  INFO IterationTravelStatsControlerListener:109 Writing all Person and Attributes to personscsv
+2023-03-10T12:29:30,406  INFO IterationTravelStatsControlerListener:153 ...done
+2023-03-10T12:29:30,407  INFO ControlerListenerManagerImpl:127 calling notifyShutdown on org.matsim.contrib.minibus.stats.Line2GexfPStat
+2023-03-10T12:29:30,407  INFO Line2GexfPStat:125 terminated the last 0 gexf handlers...
+2023-03-10T12:29:30,409  INFO ControlerListenerManagerImpl:127 calling notifyShutdown on org.matsim.contrib.minibus.stats.GexfPStatLight
+2023-03-10T12:29:31,061  INFO ControlerListenerManagerImpl:127 calling notifyShutdown on org.matsim.contrib.minibus.stats.GexfPStat
+2023-03-10T12:29:31,206  INFO ControlerListenerManagerImpl:127 calling notifyShutdown on org.matsim.contrib.minibus.stats.operatorLogger.POperatorLogger
+2023-03-10T12:29:31,206  INFO ControlerListenerManagerImpl:127 calling notifyShutdown on org.matsim.contrib.minibus.stats.PStatsOverview
+2023-03-10T12:29:31,209  INFO ControlerListenerManagerImpl:130 all ControlerShutdownListeners called.
+2023-03-10T12:29:31,210 ERROR MatsimRuntimeModifications:100 ERROR --- MATSim unexpectedly terminated. Please check the output or the logfile with warnings and errors for hints.
+2023-03-10T12:29:31,211 ERROR MatsimRuntimeModifications:101 ERROR --- results should not be used for further analysis.
+2023-03-10T12:29:31,225  INFO MatsimRuntimeModifications:103 S H U T D O W N   ---   shutdown completed.
+2023-03-10T12:29:31,236 ERROR MatsimRuntimeModifications:105 ERROR --- This was an unexpected shutdown! See the log file for a possible reason.
